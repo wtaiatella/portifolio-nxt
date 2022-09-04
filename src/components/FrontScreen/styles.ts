@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+export const Container = styled.section`
 	background-position: right bottom;
 	background-color: var(--color-back-dark);
-	position: absolute;
+	position: relative;
 	height: calc(100vh - 100px);
-	width: 100vw;
+
 	z-index: 1;
 	padding: 0 10% 0 15%;
 
@@ -18,7 +18,7 @@ export const Container = styled.header`
 
 	p {
 		font-size: 3em;
-		margin-top: 5vh;
+		padding-top: 5vh;
 	}
 
 	h1 {
@@ -97,7 +97,7 @@ export const Container = styled.header`
 	@media (max-width: 920px), (max-height: 820px) {
 		p {
 			font-size: 2.5em;
-			margin-top: 4vh;
+			padding-top: 4vh;
 		}
 
 		h1 {
@@ -124,32 +124,89 @@ export const Container = styled.header`
 	}
 
 	@media (max-width: 800px), (max-height: 720px) {
+		padding: 0 10% 0 10%;
+
 		p {
 			font-size: 2em;
-			margin-top: 4vh;
 		}
 
 		h1 {
 			font-size: 3em;
-			line-height: 70px;
-			margin-top: 0.7vh;
 		}
 
 		.intro-highlight {
 			font-size: 3em;
 			line-height: 50px;
-			margin-top: 8vh;
 		}
 
 		.intro-focus {
 			font-size: 1.5em;
-			max-width: 12em;
 			line-height: 30px;
 		}
 
 		.intro-btn {
 			font-size: 1.5em;
 			margin-top: 8vh;
+		}
+	}
+
+	@media (max-width: 640px), (max-height: 640px) {
+		padding: 0 10% 0 10%;
+
+		p {
+			font-size: 1.7em;
+		}
+
+		h1 {
+			font-size: 2.5em;
+		}
+
+		.intro-highlight {
+			font-size: 2.5em;
+			line-height: 50px;
+		}
+
+		.intro-focus {
+			font-size: 1.3em;
+			line-height: 30px;
+		}
+
+		.intro-btn {
+			font-size: 1.4em;
+			margin-top: 8vh;
+		}
+	}
+
+	@media (max-width: 400px), (max-height: 600px) {
+		height: 100vh;
+		p {
+			font-size: 1.2em;
+			padding-top: 10vh;
+		}
+
+		h1 {
+			font-size: 1.7em;
+			line-height: 30px;
+			margin-top: 1vh;
+		}
+
+		.intro-highlight {
+			font-size: 1.7em;
+			line-height: 30px;
+			margin-top: 10vh;
+		}
+
+		.intro-focus {
+			font-size: 1em;
+			line-height: 30px;
+			max-width: 18em;
+			padding: 10px;
+		}
+
+		.intro-btn {
+			font-size: 1em;
+			margin-top: 10vh;
+			max-width: 15em;
 		}
 	}
 `;
