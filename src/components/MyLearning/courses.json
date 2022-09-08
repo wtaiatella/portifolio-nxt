@@ -1,22 +1,10 @@
 {
 	"course": [
 		{
-			"institution": {
-				"name": "",
-				"img": ""
-			},
-			"name": "",
-			"technologies": [""],
-			"repositories": [""],
-			"period": "",
-			"pages": [
-				{
-					"src": "",
-					"img": ""
-				}
-			],
-			"certification": "",
-			"about": ""
+			"name": "Responsive web design",
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"about": "../README.md"
 		}
 	]
 }
