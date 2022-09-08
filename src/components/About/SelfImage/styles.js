@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-	margin: 0 auto;
+	position: relative;
+
+	max-width: 500px;
+	height: 400px;
+	margin: 0 8% 0 5%;
+
 	display: grid;
 	align-items: center;
 	justify-content: center;
 	grid-template:
 		'name name' 0px
 		'block img' auto
-		/ 0.12fr 1fr;
+		/ 60px 1fr;
 
-	.about-name {
+	.name {
 		font-size: 25px;
 		letter-spacing: 3px;
 		width: 90%;
@@ -25,7 +30,7 @@ export const Container = styled.section`
 		grid-area: name;
 	}
 
-	.about-block {
+	.block {
 		height: 80%;
 		z-index: 99;
 		grid-area: block;
@@ -36,10 +41,18 @@ export const Container = styled.section`
 		);
 	}
 
-	.about-img img {
+	.image {
 		width: 100%;
-		max-width: 500px;
 		justify-self: start;
 		grid-area: img;
+		overflow: hidden;
+		min-height: 100%;
+		position: relative;
+	}
+
+	@media (max-width: 850px) {
+		max-width: 500px;
+		height: 400px;
+		margin: 0 10% 0 10%;
 	}
 `;

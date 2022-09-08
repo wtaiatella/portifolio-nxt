@@ -1,15 +1,13 @@
 import { Container } from './styles';
 import { SelfImage } from './SelfImage';
+import { Title } from '../Title';
 
 export function About() {
 	return (
 		<Container>
 			<SelfImage />
 			<div className='about-details'>
-				<div className='about-title'>
-					<img src='./assets/img/stripes.png' alt='' />
-					<h2>About me...</h2>
-				</div>
+				<Title>About...</Title>
 
 				<p>
 					Enthusiastic about programming, I spent good part of my

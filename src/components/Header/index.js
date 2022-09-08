@@ -10,15 +10,15 @@ export function Header() {
 	useEffect(() => {
 		const resizeWidth = (event) => {
 			console.log('Width changed');
-			if (ref != null) {
+			console.log(ref.current);
+			if (ref.current != null) {
 				setHeight(ref.current.offsetHeight);
 				setWidth(ref.current.offsetWidth);
-
-				// 👇️ if you need access to parent
-				// of the element on which you set the ref
 				console.log(ref.current.offsetHeight);
 				console.log(ref.current.offsetWidth);
 			}
+			// 	// 👇️ if you need access to parent
+			// 	// of the element on which you set the ref
 		};
 
 		const menu = ref.current;

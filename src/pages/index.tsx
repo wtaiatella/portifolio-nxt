@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { FrontScreen } from '../components/FrontScreen';
 import { Header } from '../components/Header';
 import { About } from '../components/About';
+import { MyLearning } from '../components/MyLearning';
 
 const Home: NextPage = () => {
 	return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
 			<FrontScreen />
 			<Header />
 			<About />
+			<MyLearning />
 		</>
 	);
 };

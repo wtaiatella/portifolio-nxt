@@ -1,21 +1,22 @@
 import Image from 'next/image';
 import { Container } from './styles';
 
-export function SelfImage() {
+export function Title({ children }) {
 	return (
 		<Container>
-			<h1 className='name'>WAGNER TAIATELLA</h1>
-			<div className='block'></div>
 			<div className='image'>
 				<Image
-					src='/img/WagnerTaiatella.png'
-					alt='Wagner Elias Taiatella'
-					layout='fill'
-					objectFit='cover'
+					src='/img/stripes.png'
+					alt='stripes of title'
+					layout='intrinsic'
+					objectFit='contain'
+					width={96}
+					height={101}
 					objectPosition='center center'
 					quality={100}
 				/>
 			</div>
+			<h2>{children}</h2>
 		</Container>
 	);
 }
