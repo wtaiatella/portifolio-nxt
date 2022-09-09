@@ -1,9 +1,7 @@
 import Modal from 'react-modal';
 import { Container } from './styles';
-import { course } from '../courses.json';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
-import file from '../README.md';
 import { marked } from 'marked';
 
 const customStyles = {
@@ -24,30 +22,27 @@ const customStyles = {
 
 Modal.setAppElement('#__next');
 
-export function Card() {
-	const { name, description, about } = course[0];
-	console.log(course[0].name);
+export function Card(course) {
+	const { name, description, aboutPath } = course.course;
 
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [readMe, setReadMe] = useState('');
+	const [about, setAbout] = useState('');
 
 	useEffect(() => {
 		console.log('importação do arquivo md');
-		const readData = async () => {
-			// const dataRead = await import(about);
-			// setReadMe(dataRead);
-			//const readmePath = require('../');
+		console.log(aboutPath);
 
-			fetch('../README.md')
+		const readData = async () => {
+			fetch(aboutPath)
 				.then((response) => {
 					return response.text();
 				})
 				.then((text) => {
-					setReadMe(marked.parse(text));
+					setAbout(marked.parse(text));
 				});
 		};
 		readData();
-	}, [about]);
+	}, [aboutPath]);
 
 	const openModal = () => {
 		setIsModalOpen(true);
@@ -80,7 +75,7 @@ export function Card() {
 				>
 					<ReactMarkdown
 						// eslint-disable-next-line react/no-children-prop
-						children={readMe}
+						children={about}
 					/>
 				</Modal>
 			</Container>

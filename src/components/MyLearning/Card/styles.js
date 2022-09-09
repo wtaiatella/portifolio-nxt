@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+	width: 250px;
 	figure.snip1477 {
 		font-family: 'Titillium Web', sans-serif;
 		position: relative;
@@ -44,7 +45,7 @@ export const Container = styled.div`
 			:before,
 			:after {
 				height: 2px;
-				width: 400px;
+				width: 250px;
 				position: absolute;
 				content: '';
 				background-color: #ffffff;
