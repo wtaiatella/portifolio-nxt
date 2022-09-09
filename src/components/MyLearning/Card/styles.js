@@ -3,16 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
 	figure.snip1477 {
 		font-family: 'Titillium Web', sans-serif;
-
 		position: relative;
 		overflow: hidden;
 		margin: 0px;
-		min-width: 200px;
-		max-width: 300px;
-		width: 100%;
+		width: 250px;
 		color: white;
 		text-align: left;
-		font-size: 1.1em;
 		background-color: var(--color-back-dark);
 
 		*,
@@ -31,17 +27,18 @@ export const Container = styled.div`
 		}
 		.title {
 			position: absolute;
-			top: 60%;
+			top: 50%;
 			left: 25px;
 			padding: 5px 8px 5px;
 			max-width: 80%;
 
 			h2 {
+				font-size: 1.5em;
 				font-weight: bold;
+				line-height: 30px;
 				color: var(--color-text-dark);
 				margin: 0;
 				text-transform: uppercase;
-				line-height: 35px;
 			}
 
 			:before,
@@ -91,7 +88,7 @@ export const Container = styled.div`
 
 		figcaption {
 			position: absolute;
-			top: 50%;
+			top: 33%;
 			left: 25px;
 			text-align: left;
 			opacity: 0;

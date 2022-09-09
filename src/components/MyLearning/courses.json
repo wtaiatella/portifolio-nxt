@@ -5,6 +5,12 @@
 			"img": "/img/logos/origamid.png",
 			"description": "Click here to know more...",
 			"about": "../README.md"
+		},
+		{
+			"name": "Responsive web design",
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"about": "../README.md"
 		}
 	]
 }

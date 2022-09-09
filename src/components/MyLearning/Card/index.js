@@ -1,9 +1,10 @@
 import Modal from 'react-modal';
 import { Container } from './styles';
 import { course } from '../courses.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
 import file from '../README.md';
+import { marked } from 'marked';
 
 const customStyles = {
 	content: {
@@ -12,7 +13,7 @@ const customStyles = {
 		right: 'auto',
 		bottom: 'auto',
 		marginRight: '-50%',
-		maxWidth: '1300px',
+		maxWidth: '1000px',
 		maxHeight: '700px',
 		zIndex: '9999',
 
@@ -21,11 +22,32 @@ const customStyles = {
 };
 // Modal.setAppElement(document.getElementById('root'));
 
+Modal.setAppElement('#__next');
+
 export function Card() {
-	const { name, description } = course[0];
+	const { name, description, about } = course[0];
 	console.log(course[0].name);
 
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [readMe, setReadMe] = useState('');
+
+	useEffect(() => {
+		console.log('importação do arquivo md');
+		const readData = async () => {
+			// const dataRead = await import(about);
+			// setReadMe(dataRead);
+			//const readmePath = require('../');
+
+			fetch('../README.md')
+				.then((response) => {
+					return response.text();
+				})
+				.then((text) => {
+					setReadMe(marked.parse(text));
+				});
+		};
+		readData();
+	}, [about]);
 
 	const openModal = () => {
 		setIsModalOpen(true);
@@ -58,7 +80,7 @@ export function Card() {
 				>
 					<ReactMarkdown
 						// eslint-disable-next-line react/no-children-prop
-						children={file}
+						children={readMe}
 					/>
 				</Modal>
 			</Container>
