@@ -7,8 +7,6 @@ export function MyLearning() {
 	return (
 		<Container>
 			<Header />
-
-			<Card />
 			<Grid />
 		</Container>
 	);

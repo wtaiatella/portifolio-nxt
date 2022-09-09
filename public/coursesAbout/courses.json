@@ -1,0 +1,47 @@
+{
+	"courses": [
+		{
+			"name": "Responsive web design",
+			"institution": "Origamid",
+
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"aboutPath": "/coursesAbout/Origamid-Responsive web Design.md"
+		},
+		{
+			"name": "Responsive web design 2",
+			"institution": "Origamid",
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"aboutPath": "/coursesAbout/Origamid-Responsive web Design.md"
+		},
+		{
+			"name": "Responsive web design 3",
+			"institution": "Origamid",
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"aboutPath": "/coursesAbout/Origamid-Responsive web Design.md"
+		},
+		{
+			"name": "Responsive web design 4",
+			"institution": "Origamid",
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"aboutPath": "/coursesAbout/Origamid-Responsive web Design.md"
+		},
+		{
+			"name": "Responsive web design 5",
+			"institution": "Origamid",
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"aboutPath": "/coursesAbout/Origamid-Responsive web Design.md"
+		},
+		{
+			"name": "Responsive web design 6",
+			"institution": "Origamid",
+			"img": "/img/logos/origamid.png",
+			"description": "Click here to know more...",
+			"aboutPath": "/coursesAbout/Origamid-Responsive web Design.md"
+		}
+	]
+}

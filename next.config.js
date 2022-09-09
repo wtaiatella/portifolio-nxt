@@ -5,6 +5,15 @@ const nextConfig = {
 	compiler: {
 		styledComponents: true,
 	},
+
+	webpack: (config, options) => {
+		config.module.rules.push({
+			test: /\.md$/,
+			loader: 'raw-loader',
+		});
+
+		return config;
+	},
 };
 
 module.exports = nextConfig;
