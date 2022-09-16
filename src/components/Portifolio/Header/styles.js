@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: 30% 70%;
 	grid-template-rows: 400px;
 	position: relative;
 
@@ -21,10 +21,11 @@ export const Container = styled.div`
 	h1 {
 		font-family: 'Titillium Web', sans-serif;
 		transform-origin: top left;
-		transform: rotate(90deg);
+		transform: rotate(270deg);
+		text-align: center;
 		position: absolute;
-		top: 30px;
-		left: 100%;
+		top: 360px;
+		left: 0px;
 		text-transform: uppercase;
 		color: var(--color-text-title);
 		font-size: 45px;
@@ -38,11 +39,11 @@ export const Container = styled.div`
 		text-shadow: var(--color-text-black) 3px 3px 20px;
 		letter-spacing: 5px;
 		position: absolute;
-		top: 30%;
-		right: 18%;
 		text-transform: uppercase;
 		color: white;
 		padding: 0 20px;
-		margin-left: 10%;
+		left: 15%;
+		top: 30%;
+		z-index: 99;
 	}
 `;

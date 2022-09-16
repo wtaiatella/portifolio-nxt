@@ -1,0 +1,7 @@
+{
+	"name": "Animais Fantasticos",
+	"imgUrl": "http://wtaiatella.com.br",
+	"techs": ["React", "Typescript"],
+	"type": "Guided Project",
+	"readme": "string"
+}
