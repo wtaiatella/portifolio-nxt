@@ -3,6 +3,7 @@ import { Container } from './styles';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
 import { marked } from 'marked';
+import { projectProps } from '../../../services/types';
 
 const customStyles = {
 	content: {
@@ -22,18 +23,22 @@ const customStyles = {
 
 Modal.setAppElement('#__next');
 
-export function Card(course) {
-	const { name, description, aboutPath } = course.course;
+interface cardProps {
+	project: projectProps;
+}
+
+export const Card: React.FC<cardProps> = ({ project }) => {
+	const { name, type, readme, imgUrl } = project;
 
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [about, setAbout] = useState('');
 
 	useEffect(() => {
 		console.log('importação do arquivo md');
-		console.log(aboutPath);
+		console.log(readme);
 
 		const readData = async () => {
-			fetch(aboutPath)
+			fetch(readme)
 				.then((response) => {
 					return response.text();
 				})
@@ -42,7 +47,7 @@ export function Card(course) {
 				});
 		};
 		readData();
-	}, [aboutPath]);
+	}, [readme]);
 
 	const openModal = () => {
 		setIsModalOpen(true);
@@ -56,15 +61,13 @@ export function Card(course) {
 		<>
 			<Container>
 				<figure className='snip1477'>
-					<img src='/img/logos/origamid logo.png' alt='sample38' />
-					<div className='title'>
-						<div>
-							<h2>{name}</h2>
-						</div>
-					</div>
+					<img src={imgUrl} alt='sample38' />
+
 					<figcaption>
-						<p>{description}</p>
+						<h3>{name}</h3>
+						<p>{type}</p>
 					</figcaption>
+
 					<a onClick={openModal}></a>
 				</figure>
 				<Modal
@@ -81,4 +84,4 @@ export function Card(course) {
 			</Container>
 		</>
 	);
-}
+};

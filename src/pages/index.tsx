@@ -1,12 +1,20 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import { FrontScreen } from '../components/FrontScreen';
 import { Header } from '../components/Header';
 import { About } from '../components/About';
 import { MyLearning } from '../components/MyLearning';
 import { Portifolio } from '../components/Portifolio';
+import { useContext, useEffect } from 'react';
+import { UserContext } from '../contexts/UserContext';
 
-const Home: NextPage = () => {
+export default function Home({ GITHUB_TOKEN }: { GITHUB_TOKEN: string }) {
+	const { setGoogleToken } = useContext(UserContext);
+
+	useEffect(() => {
+		setGoogleToken(GITHUB_TOKEN);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [GITHUB_TOKEN]);
+
 	return (
 		<>
 			<Head>
@@ -24,57 +32,14 @@ const Home: NextPage = () => {
 			<Portifolio />
 		</>
 	);
-};
+}
 
 export const getServerSideProps = async () => {
-	const REPO: string = `${process.env.REPO}`;
-
-	const responseRepos = await fetch(REPO);
-	const repos = await responseRepos.json();
-	console.log(`Aqui está o responsefile`);
-	//console.log(repos);
-
-	interface repoProps {
-		name: string;
-	}
-
-	interface fileProp {
-		name: string;
-		download_url: string;
-	}
-
-	interface portifolioProps {
-		name: string;
-		imgUrl: string;
-		techs: Array<string>;
-		type: string;
-		readme: string;
-	}
-
-	let portifolio: portifolioProps[] = [];
-
-	repos.map(async (repo: repoProps) => {
-		const urlRepoContent = `https://api.github.com/repos/wtaiatella/${repo.name}/contents`;
-		const responseRepo = await fetch(urlRepoContent);
-		const files = await responseRepo.json();
-
-		files.map(async (file: fileProp) => {
-			if (file.name === 'portifolio.json') {
-				console.log(`Repos com portifolio`);
-				console.log(repo.name);
-				const configUrl = `https://raw.githubusercontent.com/wtaiatella/${repo.name}/main/portifolio.json`;
-				const respRepoConfig = await fetch(configUrl);
-				const repoConfig = await respRepoConfig.json();
-				portifolio = [...portifolio, repoConfig];
-			}
-		});
-	});
+	const GITHUB_TOKEN: string = `${process.env.GITHUB_TOKEN}`;
 
 	return {
 		props: {
-			portifolio,
+			GITHUB_TOKEN,
 		},
 	};
 };
-
-export default Home;
