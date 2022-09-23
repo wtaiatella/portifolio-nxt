@@ -6,100 +6,75 @@ export const Container = styled.div`
 		font-family: 'Titillium Web', sans-serif;
 		position: relative;
 		overflow: hidden;
-		margin: 0px;
+		margin: 10px;
 		width: 250px;
-		color: white;
+		color: #141414;
 		text-align: left;
-		background-color: var(--color-back-dark);
 
-		*,
-		*:before,
-		*:after {
+		* {
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
-			-webkit-transition: all 0.55s ease;
-			transition: all 0.55s ease;
+			-webkit-transition: all 0.35s ease;
+			transition: all 0.35s ease;
 		}
+
 		img {
 			max-width: 100%;
-			backface-visibility: hidden;
 			vertical-align: top;
-			opacity: 0.9;
-		}
-		.title {
-			position: absolute;
-			top: 50%;
-			left: 25px;
-			padding: 5px 8px 5px;
-			max-width: 80%;
-
-			h2 {
-				font-size: 1.5em;
-				font-weight: bold;
-				line-height: 30px;
-				color: var(--color-text-dark);
-				margin: 0;
-				text-transform: uppercase;
-			}
-
-			:before,
-			:after {
-				height: 2px;
-				width: 250px;
-				position: absolute;
-				content: '';
-				background-color: #ffffff;
-			}
-
-			:before {
-				top: 0;
-				left: 10px;
-				-webkit-transform: translateX(100%);
-				transform: translateX(100%);
-			}
-			:after {
-				bottom: 0;
-				right: 10px;
-				-webkit-transform: translateX(-100%);
-				transform: translateX(-100%);
-			}
-
-			div:before,
-			div:after {
-				width: 2px;
-				height: 300px;
-				position: absolute;
-				content: '';
-				background-color: #ffffff;
-			}
-			div:before {
-				top: 10px;
-				right: 0;
-				-webkit-transform: translateY(100%);
-				transform: translateY(100%);
-			}
-
-			div:after {
-				bottom: 10px;
-				left: 0;
-				-webkit-transform: translateY(-100%);
-				transform: translateY(-100%);
-			}
 		}
 
 		figcaption {
 			position: absolute;
-			top: 33%;
-			left: 25px;
-			text-align: left;
-			opacity: 0;
-			padding: 5px 60px 5px 10px;
-			font-size: 0.8em;
-			font-weight: 500;
-			letter-spacing: 1.5px;
+			top: calc(77%);
+			width: 100%;
+			background-color: #ffffff;
+			padding: 15px 25px 65px;
+
+			:before {
+				position: absolute;
+				content: '';
+				z-index: 2;
+				bottom: 100%;
+				left: 0;
+				width: 100%;
+				height: 80px;
+				background-image: -webkit-linear-gradient(
+					top,
+					transparent 0%,
+					#ffffff 100%
+				);
+				background-image: linear-gradient(
+					to bottom,
+					transparent 0%,
+					#ffffff 100%
+				);
+			}
+
+			p,
+			h3,
+			h2 {
+				margin: 0 0 10px;
+				color: var(--color-back-dark-light);
+			}
+
+			h3 {
+				line-height: 25px;
+				font-size: 1.5em;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			h2 {
+				line-height: 20px;
+				font-size: 1em;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
 
 			p {
-				margin: 0;
+				font-size: 1em;
+				letter-spacing: 1px;
+				line-height: 10px;
 			}
 		}
 
@@ -109,43 +84,11 @@ export const Container = styled.div`
 			bottom: 0;
 			left: 0;
 			right: 0;
+			z-index: 2;
 		}
 	}
 
-	figure.snip1477:hover {
-		img {
-			zoom: 1;
-			filter: alpha(opacity=35);
-			-webkit-opacity: 0.35;
-			opacity: 0.35;
-		}
-
-		.title {
-			:before,
-			:after,
-			div:before,
-			div:after {
-				-webkit-transform: translate(0, 0);
-				transform: translate(0, 0);
-			}
-
-			:before,
-			:after {
-				-webkit-transition-delay: 0.15s;
-				transition-delay: 0.15s;
-			}
-
-			h2 {
-				color: var(--color-text-orange);
-				-webkit-transition-delay: 0.15s;
-				transition-delay: 0.15s;
-			}
-		}
-
-		figcaption {
-			opacity: 1;
-			-webkit-transition-delay: 0.2s;
-			transition-delay: 0.2s;
-		}
+	figure.snip1477:hover figcaption {
+		top: 42%;
 	}
 `;

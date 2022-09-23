@@ -28,7 +28,7 @@ interface cardProps {
 }
 
 export const Card: React.FC<cardProps> = ({ project }) => {
-	const { name, type, readme, imgUrl } = project;
+	const { name, type, readme, imgUrl, techs } = project;
 
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [about, setAbout] = useState('');
@@ -65,7 +65,13 @@ export const Card: React.FC<cardProps> = ({ project }) => {
 
 					<figcaption>
 						<h3>{name}</h3>
-						<p>{type}</p>
+						<h2>{type}</h2>
+						{techs.length > 0
+							? techs.map((tech) => <p key={tech}>tech</p>)
+							: null}
+						<p>React</p>
+						<p>Typescript</p>
+						<p>Github API</p>
 					</figcaption>
 
 					<a onClick={openModal}></a>

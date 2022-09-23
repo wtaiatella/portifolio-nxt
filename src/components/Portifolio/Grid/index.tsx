@@ -19,13 +19,13 @@ export function Grid() {
 	const { googleToken } = useContext(UserContext);
 
 	useEffect(() => {
-		console.log(googleToken);
-
 		if (googleToken != '') {
+			console.log(googleToken);
 			let projects: projectProps[] = [];
 			const octokit = new Octokit({
 				auth: googleToken,
 			});
+			console.log(octokit);
 
 			const readRepos = async () => {
 				const respRepos = await octokit.request(

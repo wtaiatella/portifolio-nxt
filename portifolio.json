@@ -1,7 +1,7 @@
 {
 	"name": "This Protifolio",
 	"imgUrl": "/img/portifolio.png",
-	"techs": ["React", "Typescript"],
+	"techs": ["React", "Typescript", "GitHub API"],
 	"type": "Own Project",
 	"readme": "string"
 }

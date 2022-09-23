@@ -36,7 +36,7 @@ export const Container = styled.div`
 			h2 {
 				font-size: 1.5em;
 				font-weight: bold;
-				line-height: 30px;
+				line-height: 25px;
 				color: var(--color-text-dark);
 				margin: 0;
 				text-transform: uppercase;
