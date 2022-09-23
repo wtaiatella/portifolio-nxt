@@ -9,13 +9,13 @@ export function Header() {
 
 	useEffect(() => {
 		const resizeWidth = (event) => {
-			console.log('Width changed');
-			console.log(ref.current);
+			//console.log('Width changed');
+			//console.log(ref.current);
 			if (ref.current != null) {
 				setHeight(ref.current.offsetHeight);
 				setWidth(ref.current.offsetWidth);
-				console.log(ref.current.offsetHeight);
-				console.log(ref.current.offsetWidth);
+				//console.log(ref.current.offsetHeight);
+				//console.log(ref.current.offsetWidth);
 			}
 			// 	// 👇️ if you need access to parent
 			// 	// of the element on which you set the ref
