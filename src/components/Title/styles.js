@@ -18,5 +18,6 @@ export const Container = styled.div`
 		position: absolute;
 		top: 25px;
 		left: 40px;
+		color: var(--color-back-dark-light);
 	}
 `;

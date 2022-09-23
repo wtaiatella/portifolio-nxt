@@ -1,7 +1,7 @@
 {
-	"name": "Animais Fantasticos",
-	"imgUrl": "http://wtaiatella.com.br",
-	"techs": ["React", "Typescript"],
-	"type": "Guided Project",
+	"name": "This Protifolio",
+	"imgUrl": "/img/portifolio.png",
+	"techs": ["React", "Typescript", "GitHub API"],
+	"type": "Own Project",
 	"readme": "string"
 }
