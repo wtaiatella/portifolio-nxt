@@ -16,6 +16,7 @@ export const Container = styled.section`
 
 	.about-details p {
 		font-size: 1.2em;
+		color: var(--color-back-dark-light);
 	}
 
 	.about-details p {
