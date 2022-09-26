@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -48,9 +47,6 @@ body {
 	} */
 }
 
-
-
-
 body, input, textarea, select, button {
 	
 	font-family: 'Poppins', sans-serif;
@@ -66,5 +62,12 @@ button {
 	cursor: pointer;
 }
 
+.text-highlight {
+		color: var(--color-text-orange);
+	}
+
+.hidden {
+	display: none;
+}
 
 `;
