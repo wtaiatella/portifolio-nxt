@@ -67,11 +67,8 @@ export const Card: React.FC<cardProps> = ({ project }) => {
 						<h3>{name}</h3>
 						<h2>{type}</h2>
 						{techs.length > 0
-							? techs.map((tech) => <p key={tech}>tech</p>)
+							? techs.map((tech) => <p key={tech}>{tech}</p>)
 							: null}
-						<p>React</p>
-						<p>Typescript</p>
-						<p>Github API</p>
 					</figcaption>
 
 					<a onClick={openModal}></a>
