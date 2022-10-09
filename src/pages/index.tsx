@@ -7,6 +7,7 @@ import { Portifolio } from '../components/Portifolio';
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../contexts/UserContext';
 import { Contact } from '../components/Contact';
+import { Floating } from '../components/Contact/Floating';
 
 export default function Home({ GITHUB_TOKEN }: { GITHUB_TOKEN: string }) {
 	const { setGoogleToken } = useContext(UserContext);
@@ -32,6 +33,7 @@ export default function Home({ GITHUB_TOKEN }: { GITHUB_TOKEN: string }) {
 			<MyLearning />
 			<Portifolio />
 			<Contact />
+			<Floating />
 		</>
 	);
 }
