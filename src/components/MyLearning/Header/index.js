@@ -8,9 +8,11 @@ export function Header() {
 				<Image
 					src='/img/knowledge-image.png'
 					alt='knowledge Image header'
-					layout='fill'
-					objectFit='cover'
-					objectPosition='left center'
+					fill
+					style={{
+						objectFit: 'cover',
+						objectPosition: 'left center',
+					}}
 					quality={100}
 				/>
 			</div>

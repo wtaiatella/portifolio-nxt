@@ -5,6 +5,7 @@ export const Container = styled.section`
 	background-color: var(--color-back-dark);
 	position: relative;
 	height: calc(100vh - 100px);
+	overflow: 'hidden';
 
 	z-index: 1;
 	padding: 0 10% 0 15%;

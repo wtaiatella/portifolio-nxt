@@ -15,9 +15,11 @@ export function FrontScreen() {
 			<Image
 				alt='Mountains'
 				src='/header-image.png'
-				layout='fill'
-				objectFit='cover'
-				objectPosition='right bottom'
+				fill
+				style={{
+					objectFit: 'cover',
+					objectPosition: 'right botton',
+				}}
 				quality={100}
 			/>
 		</Container>
