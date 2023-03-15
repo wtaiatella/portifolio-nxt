@@ -15,10 +15,12 @@ export function Header() {
 				<Image
 					src='/img/portifolio-image.png'
 					alt='Portifolio Image header'
-					layout='fill'
-					objectFit='cover'
-					objectPosition='left center'
 					quality={100}
+					fill
+					style={{
+						objectFit: 'cover',
+						objectPosition: 'left center',
+					}}
 				/>
 			</div>
 		</Container>

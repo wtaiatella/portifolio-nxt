@@ -8,12 +8,13 @@ export function Title({ children }) {
 				<Image
 					src='/img/stripes.png'
 					alt='stripes of title'
-					layout='intrinsic'
-					objectFit='contain'
 					width={96}
 					height={101}
-					objectPosition='center center'
 					quality={100}
+					style={{
+						objectFit: 'contain',
+						objectPosition: 'center center',
+					}}
 				/>
 			</div>
 			<h2>{children}</h2>

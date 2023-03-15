@@ -10,9 +10,11 @@ export function SelfImage() {
 				<Image
 					src='/img/WagnerTaiatella.png'
 					alt='Wagner Elias Taiatella'
-					layout='fill'
-					objectFit='cover'
-					objectPosition='center center'
+					fill
+					style={{
+						objectFit: 'cover',
+						objectPosition: 'right botton',
+					}}
 					quality={100}
 				/>
 			</div>
