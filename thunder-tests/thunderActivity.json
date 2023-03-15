@@ -1,0 +1,147 @@
+[
+  {
+    "_id": "7ef24d31-6221-4143-bbad-a1120ac6cccb",
+    "colId": "history",
+    "containerId": "",
+    "name": "Listas",
+    "url": "api.egoiapp.com/lists?offset=<integer>&limit=10&order=desc&order_by=list_id&internal_name=<string>&public_name=<string>&created_min=<dateTime>&created_max=<dateTime>&updated_min=<dateTime>&updated_max=<dateTime>",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-26T14:42:18.471Z",
+    "modified": "2022-09-26T21:11:26.778Z",
+    "headers": [
+      {
+        "name": "ApiKey",
+        "value": "{{EGOI_TOKEN}}"
+      }
+    ],
+    "params": [
+      {
+        "name": "offset",
+        "value": "<integer>",
+        "isPath": false
+      },
+      {
+        "name": "limit",
+        "value": "10",
+        "isPath": false
+      },
+      {
+        "name": "order",
+        "value": "desc",
+        "isPath": false
+      },
+      {
+        "name": "order_by",
+        "value": "list_id",
+        "isPath": false
+      },
+      {
+        "name": "internal_name",
+        "value": "<string>",
+        "isPath": false
+      },
+      {
+        "name": "public_name",
+        "value": "<string>",
+        "isPath": false
+      },
+      {
+        "name": "created_min",
+        "value": "<dateTime>",
+        "isPath": false
+      },
+      {
+        "name": "created_max",
+        "value": "<dateTime>",
+        "isPath": false
+      },
+      {
+        "name": "updated_min",
+        "value": "<dateTime>",
+        "isPath": false
+      },
+      {
+        "name": "updated_max",
+        "value": "<dateTime>",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "eefaff79-826e-4405-a784-e4c6003a91cd",
+    "colId": "history",
+    "containerId": "",
+    "name": "Creat Contact",
+    "url": "api.egoiapp.com/lists/1/contacts",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-26T14:54:19.990Z",
+    "modified": "2022-09-26T14:55:33.196Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "name": "Apikey",
+        "value": "5f4d9c80cc1354d08a680d6edf44111009f1dfd6"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"base\": {\n    \"status\": \"active\",\n    \"first_name\": \"Wa1gner\",\n    \"language\": \"en\",\n    \"email\": \"wtaiatella@yahoo.com.br\"\n  }\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "7b24f552-417c-4fb7-b375-411de9249080",
+    "colId": "history",
+    "containerId": "",
+    "name": "Senders",
+    "url": "slingshot.egoiapp.com/api/v2/email/senders",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-26T15:06:26.409Z",
+    "modified": "2022-09-26T21:11:59.815Z",
+    "headers": [
+      {
+        "name": "ApiKey",
+        "value": "{{EGOI_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "55fe8427-62e6-428f-b43a-e55b11ba18af",
+    "colId": "history",
+    "containerId": "",
+    "name": "Send E-mail",
+    "url": "slingshot.egoiapp.com/api/v2/email/messages/action/send",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-26T15:14:48.607Z",
+    "modified": "2022-09-26T21:11:50.783Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "name": "ApiKey",
+        "value": "{{EGOI_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": " {\n\t\"senderId\":\"7481022b48b4b147b209279cd2129fb4\",\n\t\"subject\":\"Let's have a coffe!!!\",\n\t\"to\":[\n\t   \"wtaiatella@yahoo.com.br\"\n\t],\n\t\"senderName\":\"Wagner Taiatella\",\n\t\"textBody\":\"Olá, este é um teste\",\n\t\"openTracking\":true,\n\t\"clickTracking\":true\n }",
+      "form": []
+    },
+    "tests": []
+  }
+]
