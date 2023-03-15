@@ -1,6 +1,38 @@
 import { Container } from './styles';
+import { useState } from 'react';
 
 export function Form() {
+	const [contactName, setContactName] = useState<string>('');
+	const [contactEmail, setContactEmail] = useState<string>('');
+	const [contactSubjecct, setContactSubject] = useState<string>('');
+	const [contactmessage, setContactMessage] = useState<string>('');
+
+	const handleContactName = (event: React.FormEvent<HTMLInputElement>) => {
+		console.log(event.currentTarget.value);
+		setContactName(event.currentTarget.value);
+	};
+
+	const handleContactEmail = (event: React.FormEvent<HTMLInputElement>) => {
+		console.log(event.currentTarget.value);
+		setContactEmail(event.currentTarget.value);
+	};
+
+	const handleContactSubject = (event: React.FormEvent<HTMLInputElement>) => {
+		console.log(event.currentTarget.value);
+		setContactSubject(event.currentTarget.value);
+	};
+
+	const handleContactMessage = (
+		event: React.FormEvent<HTMLTextAreaElement>
+	) => {
+		console.log(event.currentTarget.value);
+		setContactMessage(event.currentTarget.value);
+	};
+
+	const handleSubmit = async (event: React.SyntheticEvent) => {
+		event.preventDefault();
+	};
+
 	return (
 		<Container>
 			<p>
@@ -12,7 +44,7 @@ export function Form() {
 				Let&apos;s have a<span className='text-highlight'>coffe</span>
 				!!!
 			</p>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<div className='form-details'>
 					<input
 						type='text'
@@ -21,6 +53,7 @@ export function Form() {
 						placeholder='Name'
 						name='name'
 						required
+						onChange={handleContactName}
 					/>
 
 					<input
@@ -30,6 +63,7 @@ export function Form() {
 						placeholder='E-mail'
 						name='email'
 						required
+						onChange={handleContactEmail}
 					/>
 				</div>
 
@@ -40,6 +74,7 @@ export function Form() {
 					placeholder='Subject'
 					name='subject'
 					required
+					onChange={handleContactSubject}
 				/>
 
 				<textarea
@@ -50,6 +85,7 @@ export function Form() {
 					className='form-inputs'
 					placeholder='write a message'
 					required
+					onChange={handleContactMessage}
 				></textarea>
 
 				{/*Fields to avoid robot, these fields are hidden and if filled the e-mail will not be sent*/}
