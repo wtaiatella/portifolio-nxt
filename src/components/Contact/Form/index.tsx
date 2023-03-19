@@ -29,6 +29,10 @@ export function Form() {
 		setContactMessage(event.currentTarget.value);
 	};
 
+	const handleLeaveBlank = (event: React.FormEvent<HTMLInputElement>) => {
+		console.log(event.currentTarget.value);
+	};
+
 	const handleSubmit = async (event: React.SyntheticEvent) => {
 		event.preventDefault();
 	};
@@ -92,7 +96,12 @@ export function Form() {
 				<label className='hidden'>
 					If you are not a robot, leave blank
 				</label>
-				<input type='text' className='hidden' name='leaveblank' />
+				<input
+					type='text'
+					className='hidden'
+					name='leaveblank'
+					onChange={handleLeaveBlank}
+				/>
 
 				<label className='hidden'>
 					If you are not a robot, dont change
@@ -102,6 +111,7 @@ export function Form() {
 					className='hidden'
 					name='dontchange'
 					value='http://'
+					onChange={handleLeaveBlank}
 				/>
 
 				<button
