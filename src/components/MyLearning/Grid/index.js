@@ -19,15 +19,21 @@ export function Grid() {
 		};
 		readCourses();
 	}, []);
+	console.log('Todos os cursos');
+	console.log(courses);
 	return (
 		<Container>
 			{courses.length > 0
-				? courses.map((course) => (
-						<Card
-							course={course}
-							key={course.intitution + course.name}
-						/>
-				  ))
+				? courses.map((course) => {
+						console.log('Chamada do cartão');
+						console.log(course.institution + course.name);
+						return (
+							<Card
+								course={course}
+								key={course.institution + course.name}
+							/>
+						);
+				  })
 				: null}
 		</Container>
 	);

@@ -14,7 +14,7 @@ export function FrontScreen() {
 			</a>
 			<Image
 				alt='Mountains'
-				src='/header-image.png'
+				src='/img/header-image.png'
 				fill
 				style={{
 					objectFit: 'cover',
