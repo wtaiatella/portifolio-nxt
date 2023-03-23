@@ -1,5 +1,6 @@
 import { Modal, Button } from 'antd';
 import styles from './styles.module.css';
+import Image from 'next/image';
 
 export function CourseModal({ open, setOpen, course }) {
 	console.log('modal do card');
@@ -13,7 +14,7 @@ export function CourseModal({ open, setOpen, course }) {
 	};
 
 	const styleModal = {
-		top: '15%',
+		top: '50px',
 	};
 	return (
 		<>
@@ -21,7 +22,6 @@ export function CourseModal({ open, setOpen, course }) {
 				closable
 				title={'Course Details'}
 				open={open}
-				centered
 				onCancel={handleModalClose}
 				footer={[
 					<Button key='ok' type='primary' onClick={handleModalClose}>
@@ -29,6 +29,11 @@ export function CourseModal({ open, setOpen, course }) {
 					</Button>,
 				]}
 				style={styleModal}
+				width='600px'
+				bodyStyle={{
+					overflowY: 'auto',
+					maxHeight: 'calc(60vh)',
+				}}
 			>
 				<div>
 					<a
@@ -37,19 +42,22 @@ export function CourseModal({ open, setOpen, course }) {
 						target='_blank'
 						rel='noreferrer'
 					>
-						<img
+						<Image
 							width={100}
 							height={100}
 							src={institution.img}
 							alt='imagem'
 						/>
-						<h1 className={styles.courseInstitution}>
-							{institution.name}
-						</h1>
+						<h1>{institution.name}</h1>
 					</a>
 
-					<div className={styles.aboutTitle}>
-						<img src='./img/stripes.png' alt='' />
+					<div className={styles.courseTitle}>
+						<Image
+							width={90}
+							height={100}
+							src='/img/stripes.png'
+							alt=''
+						/>
 						<h2>{name}</h2>
 					</div>
 

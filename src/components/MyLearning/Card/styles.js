@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	width: 250px;
 	figure.snip1477 {
 		font-family: 'Titillium Web', sans-serif;
 		position: relative;
 		overflow: hidden;
 		margin: 0px;
-		width: 250px;
+
 		color: white;
 		text-align: left;
 		background-color: var(--color-back-dark);

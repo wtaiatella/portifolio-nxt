@@ -2,39 +2,37 @@
 	display: flex;
 }
 
-.courseInstitution {
-	font-weight: bold;
-	font-size: 20px;
-	margin-left: 20px;
+.courseHeader img {
+	object-fit: contain;
+}
 
+.courseHeader h1 {
+	font-weight: bold;
+	font-size: 22px;
+	margin-left: 20px;
 	align-self: center;
 }
 
 .courseTitle {
+	display: flex;
+	position: relative;
+	margin: 10px 0;
+}
+
+.courseTitle h2 {
 	font-weight: bold;
 	font-size: 25px;
-	margin-bottom: 20px;
 	text-transform: uppercase;
-}
-
-.aboutTitle {
-	display: flex;
-	max-width: 1000px;
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-}
-
-.aboutTitle img {
 	position: absolute;
-	top: 0px;
-	left: -10px;
+	align-self: center;
+	top: 30%;
+	left: 40px;
 }
 
 .aboutTitle h2 {
 	font-weight: bold;
 	font-size: 35px;
-	font-weight: 700;
+
 	text-transform: uppercase;
 	width: 100%;
 	margin: 20px 0 30px 20px;
