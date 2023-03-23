@@ -7,29 +7,35 @@ export function About() {
 		<Container>
 			<SelfImage />
 			<div className='about-details'>
-				<Title>About...</Title>
+				<Title>About me</Title>
 
 				<p>
-					Enthusiastic about programming, I spent good part of my
+					Enthusiastic about technologies, I spent good part of my
 					professional career programming equipment for the automation
 					of power plant substations, but I always wanted something
 					more. After I had contact with web development because of a
-					personal project, I realized that this is the career I want
-					to pursue going forward.
+					personal project, I realized that this is what I wanted to
+					do from now on.
 				</p>
 
 				<p>
-					Like every programmer, I&apos;m always looking for the best
-					way to solve programming problems using the latest available
-					tools. Considering this, I have been looking for courses
-					that teach the development of modern solutions focusing on
-					the most used frameworks in the market.
+					Knowing this, as a self-taught person with a lot of
+					resilience, I became interested in the world of web
+					development and in my spare time, with great help from
+					Google and Developer Communities, I learned Javascript,
+					React and Nextjs.
 				</p>
 
 				<p>
-					I haven&apos;t had the opportunity to do any professional
-					work at all, but below you can see some of pages I&apos;ve
-					developed during my studies.
+					It&apos;s been two years since I started studying
+					programming always learning new techniques to become a
+					better programmer and to help me combine these technologies.
+				</p>
+
+				<p>
+					Throughout my studies I developed several test pages and
+					gathered here in this portfolio the ones I consider most
+					important. Hope you like!!
 				</p>
 			</div>
 		</Container>
