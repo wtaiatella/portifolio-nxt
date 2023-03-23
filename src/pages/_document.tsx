@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
 						href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;700&display=swap'
 						rel='stylesheet'
 					/>
-					<link rel='icon' type='image/x-icon' href='favicon.png' />
+					<link rel='icon' type='image/x-icon' href='./favicon.ico' />
 					<meta
 						name='description'
 						content="That's my personal page with my portifolio. Find more information about me and the pages I've done as a web developer!!"
