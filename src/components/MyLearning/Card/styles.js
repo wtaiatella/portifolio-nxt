@@ -28,7 +28,7 @@ export const Container = styled.div`
 		}
 		.title {
 			position: absolute;
-			top: 50%;
+			top: 75%;
 			left: 25px;
 			padding: 5px 8px 5px;
 			max-width: 80%;
@@ -89,7 +89,7 @@ export const Container = styled.div`
 
 		figcaption {
 			position: absolute;
-			top: 33%;
+			top: 50%;
 			left: 25px;
 			text-align: left;
 			opacity: 0;
