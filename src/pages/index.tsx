@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { FrontScreen } from '../components/FrontScreen';
+import { Intro } from '../components/Intro';
 import { Header } from '../components/Header';
 import { About } from '../components/About';
 import { MyLearning } from '../components/MyLearning';
@@ -24,7 +24,7 @@ export default function Home({ GITHUB_TOKEN }: { GITHUB_TOKEN: string }) {
 				<meta name='Portifolio' content='My personal protifolio' />
 				<link rel='icon' href='/code-optimization.ico' />
 			</Head>
-			<FrontScreen />
+			<Intro />
 			<Header />
 			<About />
 			<MyLearning />

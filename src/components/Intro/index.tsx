@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from './styles';
 
-export function FrontScreen() {
+export function Intro() {
 	return (
 		<Container>
 			<p className='intro-title'>Hey there!</p>
