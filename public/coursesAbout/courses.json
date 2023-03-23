@@ -1,276 +1,172 @@
 {
 	"courses": [
 		{
-			"name": "Responsive web design",
-			"institution": "Origamid",
+			"name": "Scrum Foundation",
 			"description": "Click here to know more...",
-			"cardImg": "/img/logos/origamid logo.png",
-			"logoImg": "/img/logos/origamid.png",
+			"cardImg": "/img/logos/certprof 400x500.png",
+			"institution": {
+				"name": "CertProf - Professional Knowledge",
+				"img": "/img/logos/certprof.png",
+				"address": "https://certiprof.com/"
+			},
 			"techs": [
-				"HTML",
-				"CSS Basics",
-				"Responsive Basics",
-				"CSS Flexbox",
-				"CSS Grid"
-			],
-			"repo": [
-				{
-					"name": "GitHub",
-					"address": "https://github.com/wtaiatella/freeCodeCamp"
-				},
-				{
-					"name": "CodePen",
-					"address": "https://codepen.io/collection/xKbrGO"
-				}
+				"Agile methodologies",
+				"Scrum Process",
+				"Scrum Team",
+				"Scrum Events"
 			],
 			"date": "September / 2021",
-			"pages": [
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				},
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				}
-			],
 			"cert": {
-				"img": "/img/logos/origamid.png",
-				"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+				"img": "/img/certification/certipfrof-scrum.png",
+				"address": "https://1drv.ms/b/s!AofwxRpu7alzg8lELpXp9N7M9nik3w"
 			}
 		},
+
 		{
-			"name": "Responsive web design 2",
-			"institution": "Origamid",
+			"name": "Responsive Web Design",
 			"description": "Click here to know more...",
-			"cardImg": "/img/logos/origamid logo.png",
-			"logoImg": "/img/logos/origamid.png",
+			"cardImg": "/img/logos/freecodecamp 400x500.png",
+			"institution": {
+				"name": "Freecodecamp",
+				"img": "/img/logos/freecodecamp black.png",
+				"address": "https://www.freecodecamp.org/learn"
+			},
 			"techs": [
 				"HTML",
 				"CSS Basics",
-				"Responsive Basics",
+				"CSS variables",
 				"CSS Flexbox",
-				"CSS Grid"
+				"CSS Grid",
+				"Responsive Basics"
 			],
-			"repo": [
+			"repos": [
 				{
 					"name": "GitHub",
 					"address": "https://github.com/wtaiatella/freeCodeCamp"
 				},
 				{
-					"name": "CodePen",
+					"name": "Codepen",
 					"address": "https://codepen.io/collection/xKbrGO"
 				}
 			],
 			"date": "September / 2021",
 			"pages": [
 				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+					"img": "/img/sites/freecodecamp-portifolio.png",
+					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesign/PersonalPortfolioWebpage/"
 				},
 				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+					"img": "/img/sites/freecodecamp-tribule.png",
+					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesign/TributePage/"
+				},
+				{
+					"img": "/img/sites/freecodecamp-landingpage.png",
+					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesign/ProductLandingPage/"
 				}
 			],
 			"cert": {
-				"img": "/img/logos/origamid.png",
-				"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+				"img": "/img/certification/freecodecamp-webdesign.png",
+				"address": "https://www.freecodecamp.org/certification/wagner-taiatella/responsive-web-design"
 			}
 		},
+
 		{
-			"name": "Responsive web design 3",
-			"institution": "Origamid",
+			"name": "Complete web design",
 			"description": "Click here to know more...",
-			"cardImg": "/img/logos/origamid logo.png",
-			"logoImg": "/img/logos/origamid.png",
+			"cardImg": "/img/logos/origamid 400x500.png",
+			"institution": {
+				"name": "Origamid - Programming Courses",
+				"img": "/img/logos/origamid.png",
+				"address": "https://www.origamid.com"
+			},
 			"techs": [
 				"HTML",
 				"CSS Basics",
-				"Responsive Basics",
 				"CSS Flexbox",
-				"CSS Grid"
+				"CSS Grid",
+				"Responsive Basics",
+				"UX/UI Basics",
+				"Wireframe"
 			],
-			"repo": [
+			"repos": [
 				{
 					"name": "GitHub",
-					"address": "https://github.com/wtaiatella/freeCodeCamp"
-				},
-				{
-					"name": "CodePen",
-					"address": "https://codepen.io/collection/xKbrGO"
+					"address": "https://github.com/wtaiatella/origamid"
 				}
 			],
-			"date": "September / 2021",
+			"date": "August / 2021",
 			"pages": [
 				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				},
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+					"img": "/img/sites/origamid-bikcraft.png",
+					"address": "https://html-css-js.wtaiatella.com.br/origamid/Web-Desing-Completo/bikcraft/"
 				}
 			],
 			"cert": {
-				"img": "/img/logos/origamid.png",
-				"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+				"img": "/img/certification/origamid-webdesign.png",
+				"address": "https://www.origamid.com/certificate/53b5ab97"
 			}
 		},
+
 		{
-			"name": "Responsive web design 4",
-			"institution": "Origamid",
+			"name": "FlexBox",
 			"description": "Click here to know more...",
-			"cardImg": "/img/logos/origamid logo.png",
-			"logoImg": "/img/logos/origamid.png",
-			"techs": [
-				"HTML",
-				"CSS Basics",
-				"Responsive Basics",
-				"CSS Flexbox",
-				"CSS Grid"
-			],
-			"repo": [
+			"cardImg": "/img/logos/origamid 400x500.png",
+			"institution": {
+				"name": "Origamid - Programming Courses",
+				"img": "/img/logos/origamid.png",
+				"address": "https://www.origamid.com"
+			},
+			"techs": ["HTML", "CSS Basics", "CSS Flexbox", "Responsive Layout"],
+			"repos": [
 				{
 					"name": "GitHub",
-					"address": "https://github.com/wtaiatella/freeCodeCamp"
-				},
-				{
-					"name": "CodePen",
-					"address": "https://codepen.io/collection/xKbrGO"
+					"address": "https://github.com/wtaiatella/origamid"
 				}
 			],
 			"date": "September / 2021",
 			"pages": [
 				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				},
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+					"img": "/img/sites/origamid-flexblog.png",
+					"address": "https://html-css-js.wtaiatella.com.br/origamid/CSS-Flexbox/flexblog/"
 				}
 			],
 			"cert": {
-				"img": "/img/logos/origamid.png",
-				"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+				"img": "/img/certification/origamid-flexbox.png",
+				"address": "https://www.origamid.com/certificate/56d38e39"
 			}
 		},
+
 		{
-			"name": "Responsive web design 5",
-			"institution": "Origamid",
+			"name": "Grid Layout",
 			"description": "Click here to know more...",
-			"cardImg": "/img/logos/origamid logo.png",
-			"logoImg": "/img/logos/origamid.png",
+			"cardImg": "/img/logos/origamid 400x500.png",
+			"institution": {
+				"name": "Origamid - Programming Courses",
+				"img": "/img/logos/origamid.png",
+				"address": "https://www.origamid.com"
+			},
 			"techs": [
 				"HTML",
 				"CSS Basics",
-				"Responsive Basics",
-				"CSS Flexbox",
-				"CSS Grid"
+				"CSS Grid Layout",
+				"Responsive Layout"
 			],
-			"repo": [
+			"repos": [
 				{
 					"name": "GitHub",
-					"address": "https://github.com/wtaiatella/freeCodeCamp"
-				},
-				{
-					"name": "CodePen",
-					"address": "https://codepen.io/collection/xKbrGO"
+					"address": "https://github.com/wtaiatella/origamid"
 				}
 			],
 			"date": "September / 2021",
 			"pages": [
 				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				},
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+					"img": "/img/sites/origamid-wildbeast.png",
+					"address": "https://html-css-js.wtaiatella.com.br/origamid/CSS-GridLayout/"
 				}
 			],
 			"cert": {
-				"img": "/img/logos/origamid.png",
-				"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-			}
-		},
-		{
-			"name": "Responsive web design 6",
-			"institution": "Origamid",
-			"description": "Click here to know more...",
-			"cardImg": "/img/logos/origamid logo.png",
-			"logoImg": "/img/logos/origamid.png",
-			"techs": [
-				"HTML",
-				"CSS Basics",
-				"Responsive Basics",
-				"CSS Flexbox",
-				"CSS Grid"
-			],
-			"repo": [
-				{
-					"name": "GitHub",
-					"address": "https://github.com/wtaiatella/freeCodeCamp"
-				},
-				{
-					"name": "CodePen",
-					"address": "https://codepen.io/collection/xKbrGO"
-				}
-			],
-			"date": "September / 2021",
-			"pages": [
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				},
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				}
-			],
-			"cert": {
-				"img": "/img/logos/origamid.png",
-				"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-			}
-		},
-		{
-			"name": "fLEXBOX",
-			"institution": "Origamid",
-			"description": "Click here to know more...",
-			"cardImg": "/img/logos/origamid logo.png",
-			"logoImg": "/img/logos/origamid.png",
-			"techs": [
-				"HTML",
-				"CSS Basics",
-				"Responsive Basics",
-				"CSS Flexbox",
-				"CSS Grid"
-			],
-			"repo": [
-				{
-					"name": "GitHub",
-					"address": "https://github.com/wtaiatella/freeCodeCamp"
-				},
-				{
-					"name": "CodePen",
-					"address": "https://codepen.io/collection/xKbrGO"
-				}
-			],
-			"date": "September / 2021",
-			"pages": [
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				},
-				{
-					"img": "/img/logos/origamid.png",
-					"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
-				}
-			],
-			"cert": {
-				"img": "/img/logos/origamid.png",
-				"address": "https://html-css-js.wtaiatella.com.br/freecodecamp/ResponsiveWebDesing/ProductLandingPage"
+				"img": "/img/certification/origamid-gridlayout.png",
+				"address": "https://www.origamid.com/certificate/04c3e9a3"
 			}
 		}
 	]

@@ -1,0 +1,67 @@
+.courseHeader {
+	display: flex;
+}
+
+.courseInstitution {
+	font-weight: bold;
+	font-size: 20px;
+	margin-left: 20px;
+
+	align-self: center;
+}
+
+.courseTitle {
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.aboutTitle {
+	display: flex;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.aboutTitle img {
+	position: absolute;
+	top: 0px;
+	left: -10px;
+}
+
+.aboutTitle h2 {
+	font-weight: bold;
+	font-size: 35px;
+	font-weight: 700;
+	text-transform: uppercase;
+	width: 100%;
+	margin: 20px 0 30px 20px;
+	z-index: 900;
+}
+
+.field {
+	display: flex;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.fieldTitle {
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 30px;
+}
+
+.fieldImages {
+	display: flex;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	list-style-type: none;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.fieldImages img:hover {
+	box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
