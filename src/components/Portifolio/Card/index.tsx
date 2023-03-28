@@ -71,7 +71,7 @@ export const Card: React.FC<cardProps> = ({ project }) => {
 							: null}
 					</figcaption>
 
-					<a onClick={openModal}></a>
+					{/*<a onClick={openModal}></a>*/}
 				</figure>
 				<Modal
 					isOpen={isModalOpen}
