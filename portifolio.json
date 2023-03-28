@@ -1,6 +1,6 @@
 {
 	"name": "This Protifolio",
-	"imgUrl": "/img/portifolio.png",
+	"imgUrl": "/img/sites/portifolio.png",
 	"techs": ["React", "Next", "GitHub API"],
 	"type": "Own Project",
 	"readme": "string"
