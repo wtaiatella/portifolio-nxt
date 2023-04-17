@@ -3,5 +3,6 @@
 	"imgUrl": "/img/sites/portifolio.png",
 	"techs": ["React", "Next", "GitHub API"],
 	"type": "Own Project",
-	"readme": "string"
+	"website": "",
+	"repo": ""
 }
