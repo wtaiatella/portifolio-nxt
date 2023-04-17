@@ -14,6 +14,15 @@ const nextConfig = {
 
 		return config;
 	},
+
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'www.mercadodomalte.com.br/**',
+			},
+		],
+	},
 };
 
 module.exports = nextConfig;
