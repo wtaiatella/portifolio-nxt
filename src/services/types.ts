@@ -3,5 +3,6 @@ export interface projectProps {
 	imgUrl: string;
 	techs: Array<string>;
 	type: string;
-	readme: string;
+	website: string;
+	repo: string;
 }
