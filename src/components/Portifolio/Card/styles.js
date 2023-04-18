@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	width: 250px;
+	width: 280px;
 	figure.snip1477 {
 		font-family: 'Titillium Web', sans-serif;
 		position: relative;
 		overflow: hidden;
 		margin: 10px;
-		width: 250px;
+		width: 280px;
 		color: #141414;
 		text-align: left;
 
@@ -25,7 +25,7 @@ export const Container = styled.div`
 
 		figcaption {
 			position: absolute;
-			top: calc(77%);
+			top: calc(75%);
 			width: 100%;
 			background-color: #ffffff;
 			padding: 15px 25px 65px;
@@ -50,45 +50,65 @@ export const Container = styled.div`
 				);
 			}
 
-			p,
+			span,
 			h3,
-			h2 {
-				margin: 0 0 10px;
+			h2,
+			a {
 				color: var(--color-back-dark-light);
 			}
 
-			h3 {
+			h2 {
 				line-height: 25px;
 				font-size: 1.5em;
 				font-weight: bold;
 				text-transform: uppercase;
+				margin-bottom: 10px;
 			}
 
-			h2 {
+			h3 {
 				line-height: 20px;
 				font-size: 1em;
 				font-weight: bold;
 				text-transform: uppercase;
+				margin-bottom: 15px;
 			}
 
-			p {
+			div {
+				height: 60px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			span {
 				font-size: 1em;
 				letter-spacing: 1px;
 				line-height: 10px;
+				margin-right: 10px;
 			}
-		}
 
-		a {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 2;
+			a {
+				display: inline-block;
+				margin-right: 20px;
+				box-sizing: border-box;
+				width: 80px;
+				padding: 5px 5px;
+				border-radius: 5px;
+				background: linear-gradient(
+					45deg,
+					var(--color-grad-start) 60%,
+					var(--color-grad-end)
+				);
+				color: white;
+				letter-spacing: 1px;
+				text-align: center;
+				font-weight: 700;
+			}
 		}
 	}
 
 	figure.snip1477:hover figcaption {
-		top: 42%;
+		top: 30%;
 	}
 `;
