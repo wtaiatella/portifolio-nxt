@@ -1,6 +1,7 @@
 import { CourseModal } from './CourseModal';
 import { Container } from './styles';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export function Card({ course }) {
 	const { name, description, cardImg } = course;
@@ -17,7 +18,7 @@ export function Card({ course }) {
 		<>
 			<Container>
 				<figure className='snip1477'>
-					<img src={cardImg} alt={name} />
+					<Image src={cardImg} alt={name} width={280} height={350} />
 					<div className='title'>
 						<div>
 							<h2>{name}</h2>

@@ -6,7 +6,6 @@ export const Container = styled.div`
 		position: relative;
 		overflow: hidden;
 		margin: 0px;
-
 		color: white;
 		text-align: left;
 		background-color: var(--color-back-dark);
@@ -19,12 +18,7 @@ export const Container = styled.div`
 			-webkit-transition: all 0.55s ease;
 			transition: all 0.55s ease;
 		}
-		img {
-			max-width: 100%;
-			backface-visibility: hidden;
-			vertical-align: top;
-			opacity: 0.9;
-		}
+
 		.title {
 			position: absolute;
 			top: 75%;
@@ -66,7 +60,7 @@ export const Container = styled.div`
 			div:before,
 			div:after {
 				width: 2px;
-				height: 300px;
+				height: 330px;
 				position: absolute;
 				content: '';
 				background-color: #ffffff;
@@ -112,6 +106,7 @@ export const Container = styled.div`
 	}
 
 	figure.snip1477:hover {
+		cursor: pointer;
 		img {
 			zoom: 1;
 			filter: alpha(opacity=35);

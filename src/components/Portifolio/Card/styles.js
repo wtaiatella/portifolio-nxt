@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	width: 280px;
 	figure.snip1477 {
 		font-family: 'Titillium Web', sans-serif;
 		position: relative;
 		overflow: hidden;
-		margin: 10px;
-		width: 280px;
 		color: #141414;
 		text-align: left;
 
@@ -16,11 +13,6 @@ export const Container = styled.div`
 			box-sizing: border-box;
 			-webkit-transition: all 0.35s ease;
 			transition: all 0.35s ease;
-		}
-
-		img {
-			max-width: 100%;
-			vertical-align: top;
 		}
 
 		figcaption {
