@@ -6,3 +6,10 @@ export interface projectProps {
 	website: string;
 	repo: string;
 }
+
+export interface messageProps {
+	name: string;
+	email: string;
+	subject: string;
+	message: string;
+}

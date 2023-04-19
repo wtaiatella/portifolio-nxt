@@ -1,10 +1,11 @@
 import { Container } from './styles';
 import { useState } from 'react';
+import { messageProps } from '../../../services/types';
 
 export function Form() {
 	const [contactName, setContactName] = useState<string>('');
 	const [contactEmail, setContactEmail] = useState<string>('');
-	const [contactSubjecct, setContactSubject] = useState<string>('');
+	const [contactSubject, setContactSubject] = useState<string>('');
 	const [contactmessage, setContactMessage] = useState<string>('');
 
 	const handleContactName = (event: React.FormEvent<HTMLInputElement>) => {
@@ -35,17 +36,33 @@ export function Form() {
 
 	const handleSubmit = async (event: React.SyntheticEvent) => {
 		event.preventDefault();
+		const emailData: messageProps = {
+			name: contactName,
+			email: contactEmail,
+			subject: contactSubject,
+			message: contactmessage,
+		};
+		const resposta = await fetch('/api/email', {
+			method: 'POST',
+			body: JSON.stringify(emailData),
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8',
+			},
+		})
+			.then((response) => response.text())
+			.catch((err) => console.log(err));
+		console.log(resposta);
 	};
 
 	return (
 		<Container>
 			<p>
-				Did you like
-				<span className='text-highlight'>like</span> my portifolio?
+				Did you
+				<span className='text-highlight'> like</span> my portifolio?
 			</p>
 
 			<p>
-				Let&apos;s have a<span className='text-highlight'>coffe</span>
+				Let&apos;s have a <span className='text-highlight'>coffe</span>
 				!!!
 			</p>
 			<form onSubmit={handleSubmit}>
