@@ -27,6 +27,7 @@ export default async function handler(
 		},
 	]);
 	console.log('dataEmail = ', dataEmail);
+
 	const dataCreateContat = JSON.stringify({
 		base: {
 			status: 'active',
@@ -65,5 +66,24 @@ export default async function handler(
 				.catch((err) => console.log(err));
 			console.log(resposta);
 			res.status(200).json(resposta);
+
+		case 'GET':
+			const resGetContact = await fetch(
+				'https://api.egoiapp.com/contacts/search' +
+					new URLSearchParams({
+						type: 'email',
+						contact: `${req.query.email}`,
+					}),
+				{
+					method: 'GET',
+					headers: {
+						ApiKey: `${EGOI_TOKEN}`,
+					},
+				}
+			)
+				.then((response) => response.text())
+				.catch((err) => console.log(err));
+			console.log(resGetContact);
+			res.status(200).json(resGetContact);
 	}
 }

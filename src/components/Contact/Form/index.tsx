@@ -42,14 +42,20 @@ export function Form() {
 			subject: contactSubject,
 			message: contactmessage,
 		};
-		const resposta = await fetch('/api/email', {
-			method: 'POST',
-			body: JSON.stringify(emailData),
-			headers: {
-				'Content-type': 'application/json; charset=UTF-8',
-			},
-		})
-			.then((response) => response.text())
+		const resposta = await fetch(
+			'/api/email' + new URLSearchParams({ contact: contactEmail }),
+			{
+				method: 'GET',
+				//body: JSON.stringify(emailData),
+				//headers: {
+				//	'Content-type': 'application/json; charset=UTF-8',
+				//},
+			}
+		)
+			.then((contact) => {
+				console.log(contact.text());
+				return contact.text();
+			})
 			.catch((err) => console.log(err));
 		console.log(resposta);
 	};
