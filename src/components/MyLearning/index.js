@@ -5,7 +5,7 @@ import { Card } from './Card';
 
 export function MyLearning() {
 	return (
-		<Container>
+		<Container id='knowledge'>
 			<Header />
 			<Grid />
 		</Container>

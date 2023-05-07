@@ -25,4 +25,10 @@ export const Container = styled.section`
 		margin: 0 auto;
 		padding: 3em 0;
 	}
+
+	@media (max-width: 1200px) {
+		.content {
+			grid-template-columns: 1fr;
+		}
+	}
 `;

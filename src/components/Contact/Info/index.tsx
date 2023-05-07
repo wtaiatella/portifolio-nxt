@@ -18,14 +18,14 @@ export function Info() {
 			</p>
 
 			<h3>address</h3>
-			<p>Brazil, Porto Velho, RO</p>
+			<p>Brazil, Florianópolis, SC</p>
 
 			<div className='contact-socialmedia'>
 				<h2>Follow me</h2>
 				<ul>
 					<li>
 						<a
-							href='https://api.whatsapp.com/send/?phone=%2B5541992293013'
+							href='https://api.whatsapp.com/send/?phone=%2B5541992292443'
 							target='_blank'
 							rel='noreferrer'
 						>
