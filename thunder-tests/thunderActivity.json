@@ -73,12 +73,12 @@
     "_id": "eefaff79-826e-4405-a784-e4c6003a91cd",
     "colId": "history",
     "containerId": "",
-    "name": "Creat Contact",
+    "name": "Creat Contact Egoi",
     "url": "api.egoiapp.com/lists/1/contacts",
     "method": "POST",
     "sortNum": 0,
     "created": "2022-09-26T14:54:19.990Z",
-    "modified": "2023-04-20T14:10:51.317Z",
+    "modified": "2023-05-02T00:43:12.032Z",
     "headers": [
       {
         "name": "Content-Type",
@@ -92,7 +92,7 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"base\": {\n    \"status\": \"active\",\n    \"first_name\": \"Wa2gner\",\n    \"language\": \"en\",\n    \"email\": \"wtaiatella@yahoo.com.br\"\n  }\n}",
+      "raw": "{\n  \"base\": {\n    \"status\": \"active\",\n    \"first_name\": \"Wa2gner\",\n    \"language\": \"en\",\n    \"email\": \"wtaiatella+egoi1@gmail.com\"\n  }\n}",
       "form": []
     },
     "tests": []
@@ -101,7 +101,7 @@
     "_id": "d7845f21-85af-4000-9e6b-b6ffae129cac",
     "colId": "history",
     "containerId": "",
-    "name": "Search contact",
+    "name": "Search contact API -> Egoi",
     "url": "https://api.egoiapp.com/contacts/search?type=email&contact=wtaiatella@yahoo.com.br",
     "method": "GET",
     "sortNum": 0,
@@ -136,12 +136,12 @@
     "_id": "8fad52a3-7a02-445b-b1a9-a33048c0ef74",
     "colId": "history",
     "containerId": "",
-    "name": "Update Contact",
-    "url": "api.egoiapp.com/lists/1/contacts/7bec8aff04",
+    "name": "Update Contact E-goi",
+    "url": "https://api.egoiapp.com/lists/1/contacts/ef2b5a9265",
     "method": "PATCH",
     "sortNum": 0,
     "created": "2022-09-26T14:54:19.990Z",
-    "modified": "2023-04-20T23:10:46.043Z",
+    "modified": "2023-04-23T13:55:34.484Z",
     "headers": [
       {
         "name": "Content-Type",
@@ -155,7 +155,36 @@
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"base\": {\n    \"status\": \"active\",\n    \"first_name\": \"Wagner\",\n    \"language\": \"en\",\n    \"email\": \"wtaiatella@yahoo.com.br\"\n  }\n}",
+      "raw": "{\r\n\r\n\t\t\"base\": {\r\n\t\t\t\"status\": \"active\",\r\n\t\t\t\"first_name\": \"Wagner\",\r\n\t\t\t\"language\": \"en\",\r\n\t\t\t\"email\": \"wtaiatella1@ya12hoo.com.br\"\r\n\t\t}\r\n\t}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "60d2daa3-8a38-4e5b-a715-cafc00e6525a",
+    "colId": "history",
+    "containerId": "",
+    "name": "Creat Contact API",
+    "url": "http://localhost:3000/api/email",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-26T14:54:19.990Z",
+    "modified": "2023-04-23T02:28:14.905Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "name": "ApiKey",
+        "value": "480e390299ab096ca13082d686eb6bbc5b188811",
+        "isDisabled": true
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Wagner outro\",\n  \"email\": \"wtaiatella@yaho1.com.br\",\n  \"subject\": \"Assunto teste\",\n  \"message\": \"menssagem de teste\"\n}",
       "form": []
     },
     "tests": []
@@ -203,6 +232,73 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"senderId\": \"1234\",\n  \"senderName\": \"Customer Support\",\n  \"to\": \"wtaiatella@email.com\",\n  \"subject\": \"Welcome to the Club\",\n  \"htmlBody\": \"Hello %name%! <b>Welcome!</b> \",\n  \"textBody\": \"Hello %name%! Welcome! \",\n  \"openTracking\": false,\n  \"clickTracking\": false,\n  \"customData\": \"meta-data, my relevant metadata\",\n  \"priority\": \"urgent\",\n  \"registered\": false,\n  \"group\": \"wtaiatella\",\n  \"replyTo\": {\n    \"name\": \"Wagner yahoo\",\n    \"email\": \"wtaiatella@yahoo.com.br\"\n  }\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "21fd862d-e339-4ee1-9ce0-8fb3c69e2664",
+    "colId": "history",
+    "containerId": "",
+    "name": "Search Contact APP -> API",
+    "url": "http://localhost:3000/api/email?contact=wtaiatella@yahoo.com.br",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-22T16:04:42.665Z",
+    "modified": "2023-04-23T13:45:25.786Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "contact",
+        "value": "wtaiatella@yahoo.com.br",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "f96efcc1-6bbb-442e-954a-8ba62823d721",
+    "colId": "history",
+    "containerId": "",
+    "name": "Get Automations",
+    "url": "https://api.egoiapp.com/automations",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-27T00:42:31.766Z",
+    "modified": "2023-04-27T00:47:05.316Z",
+    "headers": [
+      {
+        "name": "ApiKey",
+        "value": "480e390299ab096ca13082d686eb6bbc5b188811"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "d283160c-b949-470c-9c32-69fac6306155",
+    "colId": "history",
+    "containerId": "",
+    "name": "Add a Tag E-goi",
+    "url": "https://api.egoiapp.com/lists/1/contacts/actions/attach-tag",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-27T00:43:20.303Z",
+    "modified": "2023-05-02T00:46:22.415Z",
+    "headers": [
+      {
+        "name": "ApiKey",
+        "value": "480e390299ab096ca13082d686eb6bbc5b188811"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n\"contacts\": [\r\n\"6850ac3cf5\"\r\n],\r\n\"tag_id\": 1\r\n}",
       "form": []
     },
     "tests": []

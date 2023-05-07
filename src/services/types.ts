@@ -13,3 +13,9 @@ export interface messageProps {
 	subject: string;
 	message: string;
 }
+
+export interface createContactProps {
+	status: number;
+	contact_id: string;
+	message: string;
+}
