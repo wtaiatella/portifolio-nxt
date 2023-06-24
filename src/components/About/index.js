@@ -4,7 +4,7 @@ import { Title } from '../Title';
 
 export function About() {
 	return (
-		<Container>
+		<Container id='about'>
 			<SelfImage />
 			<div className='about-details'>
 				<Title>About me</Title>

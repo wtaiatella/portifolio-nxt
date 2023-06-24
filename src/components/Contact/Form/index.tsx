@@ -1,12 +1,53 @@
 import { Container } from './styles';
-import { useState } from 'react';
-import { messageProps } from '../../../services/types';
+import { useState, useEffect } from 'react';
+import { messageProps, createContactProps } from '@/services/types';
+import { createContact } from '@/services/email';
+import { message } from 'antd';
 
-export function Form() {
+export const Form: React.FC = () => {
 	const [contactName, setContactName] = useState<string>('');
 	const [contactEmail, setContactEmail] = useState<string>('');
 	const [contactSubject, setContactSubject] = useState<string>('');
-	const [contactmessage, setContactMessage] = useState<string>('');
+	const [contactMessage, setContactMessage] = useState<string>('');
+	const [contact, setContact] = useState<createContactProps>(null);
+	const [messageApi, contextHolder] = message.useMessage();
+
+	useEffect(() => {
+		console.log('Status da Resposta');
+		console.log(contact?.status);
+		if (contact?.status > 200) {
+			switch (contact?.status) {
+				case 201:
+					messageApi.open({
+						type: 'success',
+						content: 'Message sent successfully',
+					});
+					setContactName('');
+					setContactEmail('');
+					setContactSubject('');
+					setContactMessage('');
+					break;
+
+				case 409:
+					messageApi.open({
+						type: 'warning',
+						content: 'Hi again! Message sent successfully',
+					});
+					setContactName('');
+					setContactEmail('');
+					setContactSubject('');
+					setContactMessage('');
+					break;
+
+				default:
+					messageApi.open({
+						type: 'error',
+						content:
+							'Sorry, something went wrong, please send again later',
+					});
+			}
+		}
+	}, [contact, messageApi]);
 
 	const handleContactName = (event: React.FormEvent<HTMLInputElement>) => {
 		console.log(event.currentTarget.value);
@@ -36,26 +77,20 @@ export function Form() {
 
 	const handleSubmit = async (event: React.SyntheticEvent) => {
 		event.preventDefault();
-		const emailData: messageProps = {
+		const messageData: messageProps = {
 			name: contactName,
 			email: contactEmail,
 			subject: contactSubject,
-			message: contactmessage,
+			message: contactMessage,
 		};
-		const resposta = await fetch('/api/email', {
-			method: 'POST',
-			body: JSON.stringify(emailData),
-			headers: {
-				'Content-type': 'application/json; charset=UTF-8',
-			},
-		})
-			.then((response) => response.text())
-			.catch((err) => console.log(err));
-		console.log(resposta);
+
+		//const contactID = await searchContact(contactEmail);
+		setContact(await (await createContact(messageData)).json());
 	};
 
 	return (
 		<Container>
+			{contextHolder}
 			<p>
 				Did you
 				<span className='text-highlight'> like</span> my portifolio?
@@ -75,6 +110,7 @@ export function Form() {
 						name='name'
 						required
 						onChange={handleContactName}
+						value={contactName}
 					/>
 
 					<input
@@ -85,6 +121,7 @@ export function Form() {
 						name='email'
 						required
 						onChange={handleContactEmail}
+						value={contactEmail}
 					/>
 				</div>
 
@@ -96,6 +133,7 @@ export function Form() {
 					name='subject'
 					required
 					onChange={handleContactSubject}
+					value={contactSubject}
 				/>
 
 				<textarea
@@ -107,6 +145,7 @@ export function Form() {
 					placeholder='write a message'
 					required
 					onChange={handleContactMessage}
+					value={contactMessage}
 				></textarea>
 
 				{/*Fields to avoid robot, these fields are hidden and if filled the e-mail will not be sent*/}
@@ -142,4 +181,4 @@ export function Form() {
 			</form>
 		</Container>
 	);
-}
+};

@@ -36,6 +36,10 @@ export const Container = styled.div`
 		display: flex;
 	}
 
+	.contact-socialmedia li {
+		list-style-type: none;
+	}
+
 	.contact-socialmedia img {
 		width: 50px;
 		color: white;
@@ -43,5 +47,10 @@ export const Container = styled.div`
 
 	.contact-socialmedia li + li {
 		margin-left: 50px;
+	}
+
+	@media (max-width: 1200px) {
+		margin-left: 0px;
+		margin-top: 50px;
 	}
 `;
