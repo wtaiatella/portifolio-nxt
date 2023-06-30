@@ -33,4 +33,15 @@ export const Container = styled.section`
 			padding: 0 30px;
 		}
 	}
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+
+		.about-details {
+			margin-top: 30px;
+			width: 100%;
+			padding: 0 30px;
+		}
+	}
 `;
