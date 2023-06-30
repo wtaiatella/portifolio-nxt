@@ -55,4 +55,10 @@ export const Container = styled.section`
 		height: 400px;
 		margin: 0 10% 0 10%;
 	}
+
+	@media (max-width: 550px) {
+		max-width: 500px;
+		height: 400px;
+		margin: 0 10% 0 10%;
+	}
 `;
