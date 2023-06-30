@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
+		"start": "serv -s build",
 		"lint": "next lint",
 		"killport": "fuser -n tcp -k 3000"
 	},
