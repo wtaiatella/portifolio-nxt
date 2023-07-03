@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"antd": "^5.4.4",
+		"bufferutil": "^4.0.7",
 		"fs": "^0.0.1-security",
 		"markdown-to-jsx": "^7.1.7",
 		"marked": "^4.1.0",
@@ -25,7 +26,8 @@
 		"socket.io": "^4.7.1",
 		"styled-components": "^5.3.9",
 		"tls": "^0.0.1",
-		"typescript": "^5.0.4"
+		"typescript": "^5.0.4",
+		"utf-8-validate": "^5.0.10"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.37.0",
