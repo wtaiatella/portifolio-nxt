@@ -5,17 +5,14 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "serv -s build",
+		"start": "next start",
 		"lint": "next lint",
 		"killport": "fuser -n tcp -k 3000"
 	},
 	"dependencies": {
 		"antd": "^5.4.4",
-		"bufferutil": "^4.0.7",
-		"fs": "^0.0.1-security",
 		"markdown-to-jsx": "^7.1.7",
 		"marked": "^4.1.0",
-		"net": "^1.0.2",
 		"next": "^13.3.1",
 		"octokit": "^2.0.14",
 		"react": "18.2.0",
@@ -23,11 +20,8 @@
 		"react-draggable": "^4.4.5",
 		"react-is": "^18.2.0",
 		"react-modal": "^3.16.1",
-		"socket.io": "^4.7.1",
 		"styled-components": "^5.3.9",
-		"tls": "^0.0.1",
-		"typescript": "^5.0.4",
-		"utf-8-validate": "^5.0.10"
+		"typescript": "^5.0.4"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.37.0",
