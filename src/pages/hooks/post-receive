@@ -4,4 +4,4 @@
 GIT_WORK_TREE=/var/www/wtaiatella git checkout -f
 
 npm install
-npm run dev
+pm2 restart 0
