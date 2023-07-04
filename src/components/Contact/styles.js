@@ -10,11 +10,11 @@ export const Container = styled.section`
 		transform: rotate(270deg);
 		text-align: center;
 		position: absolute;
-		top: 300px;
+		top: 280px;
 		left: 0px;
 		text-transform: uppercase;
 		color: var(--color-text-title);
-		font-size: 50px;
+		font-size: 45px;
 		letter-spacing: 10px;
 	}
 
@@ -33,5 +33,25 @@ export const Container = styled.section`
 	}
 
 	@media (max-width: 850px) {
+		h1 {
+			top: 210px;
+			left: 0px;
+			font-size: 35px;
+			letter-spacing: 7px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			top: 200px;
+			left: 0px;
+			font-size: 33px;
+			letter-spacing: 4px;
+		}
+		.content {
+			max-width: 100%;
+			margin: 0 50px 0 50px;
+			padding: 3em 0;
+		}
 	}
 `;

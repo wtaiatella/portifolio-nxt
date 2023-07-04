@@ -52,5 +52,26 @@ export const Container = styled.div`
 	@media (max-width: 1200px) {
 		margin-left: 0px;
 		margin-top: 50px;
+		h3 {
+			margin-top: 30px;
+		}
+	}
+
+	@media (max-width: 630px) {
+		margin-left: 0px;
+		margin-top: 40px;
+		h2 {
+			font-size: 1.5em;
+			letter-spacing: 2px;
+		}
+		h3 {
+			margin-top: 25px;
+			font-size: 1.3em;
+			font-weight: 300;
+			letter-spacing: 3px;
+		}
+		.contact-socialmedia li + li {
+			margin-left: 30px;
+		}
 	}
 `;

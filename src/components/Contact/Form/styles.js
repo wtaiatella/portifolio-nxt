@@ -54,4 +54,22 @@ export const Container = styled.div`
 		font-size: 1.5em;
 		margin-top: 1em;
 	}
+
+	@media (max-width: 630px) {
+		p {
+			font-size: 1.5em;
+		}
+		.form-inputs {
+			font-size: 1.1em;
+			padding: 7px 15px;
+			margin-bottom: 20px;
+		}
+		button {
+			max-width: 12em;
+			padding: 10px 15px;
+			letter-spacing: 3px;
+			font-size: 1.3em;
+			margin-top: 0.5em;
+		}
+	}
 `;
