@@ -8,6 +8,6 @@ export const Container = styled.div`
 	justify-content: center;
 	gap: 50px;
 
-	@media (max-width: 950px) {
+	@media (max-width: 400px) {
 	}
 `;

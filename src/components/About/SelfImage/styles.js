@@ -57,8 +57,19 @@ export const Container = styled.section`
 	}
 
 	@media (max-width: 550px) {
-		max-width: 500px;
-		height: 400px;
-		margin: 0 10% 0 10%;
+		max-width: 400px;
+		height: 300px;
+		margin: 0 4%;
+		grid-template:
+			'name name' 0px
+			'block img' auto
+			/ 35px 1fr;
+
+		.name {
+			font-size: 20px;
+			letter-spacing: 2px;
+			padding: 3px 5px;
+			top: 40px;
+		}
 	}
 `;

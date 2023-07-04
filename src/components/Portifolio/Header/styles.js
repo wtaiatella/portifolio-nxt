@@ -36,7 +36,7 @@ export const Container = styled.div`
 		font-family: 'Titillium Web', sans-serif;
 		font-size: 50px;
 		font-weight: 700;
-		text-shadow: var(--color-text-black) 3px 3px 20px;
+		text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black;
 		letter-spacing: 5px;
 		position: absolute;
 		text-transform: uppercase;
@@ -45,5 +45,39 @@ export const Container = styled.div`
 		left: 15%;
 		top: 30%;
 		z-index: 99;
+	}
+
+	@media (max-width: 850px) {
+		grid-template-columns: 25% 75%;
+		grid-template-rows: 300px;
+		h1 {
+			top: 270px;
+			font-size: 35px;
+			letter-spacing: 7px;
+		}
+		p {
+			font-size: 40px;
+			letter-spacing: 4px;
+			margin-left: 0%;
+			left: 10%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: 20% 80%;
+		grid-template-rows: 250px;
+		h1 {
+			top: 230px;
+			font-size: 33px;
+			letter-spacing: 4px;
+		}
+		p {
+			text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black;
+			font-size: 30px;
+			letter-spacing: 4px;
+			margin-left: 4%;
+			left: 7%;
+			top: 25%;
+		}
 	}
 `;

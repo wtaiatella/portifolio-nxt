@@ -12,7 +12,7 @@ export function Title({ children }) {
 					height={101}
 					quality={100}
 					style={{
-						objectFit: 'contain',
+						objectFit: 'fill',
 						objectPosition: 'center center',
 					}}
 				/>

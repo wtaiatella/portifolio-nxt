@@ -5,7 +5,7 @@ export const Container = styled.section`
 	grid-template-columns: minmax(400px, 1fr) 1.5fr;
 	position: relative;
 	margin: 0 auto;
-	padding: 50px 2%;
+	padding: 50px 0%;
 	border: 1px solid;
 
 	.about-details {
@@ -41,7 +41,12 @@ export const Container = styled.section`
 		.about-details {
 			margin-top: 30px;
 			width: 100%;
-			padding: 0 30px;
+			padding: 0 20px;
+		}
+
+		.about-details p {
+			font-size: 1em;
+			color: var(--color-back-dark-light);
 		}
 	}
 `;

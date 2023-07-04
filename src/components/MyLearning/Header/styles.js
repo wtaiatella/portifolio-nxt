@@ -35,14 +35,46 @@ export const Container = styled.div`
 		font-family: 'Titillium Web', sans-serif;
 		font-size: 50px;
 		font-weight: 700;
-		text-shadow: var(--color-text-black) 3px 3px 20px;
+		text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black;
 		letter-spacing: 5px;
 		position: absolute;
 		top: 30%;
 		right: 18%;
 		text-transform: uppercase;
 		color: white;
-		padding: 0 20px;
 		margin-left: 10%;
+	}
+
+	@media (max-width: 850px) {
+		grid-template-columns: 75% 25%;
+		grid-template-rows: 300px;
+		h1 {
+			top: 20px;
+			font-size: 35px;
+			letter-spacing: 7px;
+		}
+		p {
+			font-size: 40px;
+			letter-spacing: 4px;
+
+			margin-left: 5%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: 80% 20%;
+		grid-template-rows: 250px;
+		h1 {
+			top: 12px;
+			font-size: 33px;
+			letter-spacing: 4px;
+		}
+		p {
+			text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black;
+			font-size: 30px;
+			letter-spacing: 4px;
+			margin-left: 4%;
+			right: 12%;
+		}
 	}
 `;

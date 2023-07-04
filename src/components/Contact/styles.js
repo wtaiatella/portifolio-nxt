@@ -10,7 +10,7 @@ export const Container = styled.section`
 		transform: rotate(270deg);
 		text-align: center;
 		position: absolute;
-		top: 350px;
+		top: 300px;
 		left: 0px;
 		text-transform: uppercase;
 		color: var(--color-text-title);
@@ -30,5 +30,8 @@ export const Container = styled.section`
 		.content {
 			grid-template-columns: 1fr;
 		}
+	}
+
+	@media (max-width: 850px) {
 	}
 `;
