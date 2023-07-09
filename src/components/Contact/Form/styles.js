@@ -56,6 +56,11 @@ export const Container = styled.div`
 	}
 
 	@media (max-width: 630px) {
+		.form-details {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 20px;
+		}
 		p {
 			font-size: 1.5em;
 		}

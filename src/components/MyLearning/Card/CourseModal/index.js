@@ -16,6 +16,9 @@ export function CourseModal({ open, setOpen, course }) {
 	const styleModal = {
 		top: '50px',
 	};
+
+	var larguraJanela = window.innerWidth;
+	console.log(larguraJanela);
 	return (
 		<>
 			<Modal
@@ -53,8 +56,8 @@ export function CourseModal({ open, setOpen, course }) {
 
 					<div className={styles.courseTitle}>
 						<Image
-							width={90}
-							height={100}
+							width={window.innerWidth > 500 ? 90 : 60}
+							height={window.innerWidth > 500 ? 100 : 50}
 							src='/img/stripes.png'
 							alt=''
 						/>
@@ -65,7 +68,7 @@ export function CourseModal({ open, setOpen, course }) {
 						<p className={styles.fieldTitle}>
 							Learned Technologies:
 						</p>
-						<ul>
+						<ul className={styles.fieldContent}>
 							{techs.map((tech) => (
 								<li key={tech}>{tech}</li>
 							))}
@@ -76,7 +79,7 @@ export function CourseModal({ open, setOpen, course }) {
 						<>
 							<div className={styles.field}>
 								<p className={styles.fieldTitle}>Repository:</p>
-								<ul>
+								<ul className={styles.fieldContent}>
 									{repos.map((repo) => (
 										<li key={repo.address + repo.name}>
 											<a
@@ -95,7 +98,7 @@ export function CourseModal({ open, setOpen, course }) {
 
 					<div className={styles.field}>
 						<p className={styles.fieldTitle}>Period performed:</p>
-						<p>{date}</p>
+						<p className={styles.fieldContent}>{date}</p>
 					</div>
 
 					{pages ? (
