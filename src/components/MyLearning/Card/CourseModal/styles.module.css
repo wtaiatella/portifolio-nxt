@@ -41,7 +41,7 @@
 
 .field {
 	display: flex;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	font-size: 18px;
 }
 
@@ -53,8 +53,7 @@
 
 .fieldImages {
 	display: flex;
-	margin-bottom: 10px;
-	margin-top: 10px;
+	margin: 10px 0 20px;
 	list-style-type: none;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -62,4 +61,43 @@
 
 .fieldImages img:hover {
 	box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 850px) {
+	.fieldImages {
+		flex-direction: column;
+		align-content: center;
+		margin: 10px auto;
+	}
+}
+
+@media (max-width: 850px) {
+	.courseHeader {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.courseHeader img {
+		margin: 0 auto;
+	}
+
+	.courseHeader h1 {
+		text-align: center;
+		margin-left: 5px auto;
+	}
+
+	.courseTitle h2 {
+		font-size: 20px;
+		top: 0%;
+		left: 30px;
+		margin: 10px 0;
+	}
+
+	.field {
+		flex-direction: column;
+	}
+
+	.fieldContent {
+		margin-left: 50px;
+	}
 }
