@@ -1,7 +1,23 @@
 version: 0.0
 os: linux
 hooks:
-  ApplicationStart:
-    - location: deploy.sh
+  ApplicationStop:
+    - location: deployApplicationStop.sh
+      timeout: 300
+      runas: root
+  DownloadBundle:
+    - location: deployDownloadBundle.sh
       timeout: 300
       runas: ec2-user
+  Install:
+    - location: deployInstall.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: deployAfterInstall.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: deployApplicationStart.sh
+      timeout: 300
+      runas: root
