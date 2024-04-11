@@ -1,2 +1,3 @@
 #!/bin/bash
-npm run build
+source ~/.nvm/nvm.sh
+~/.nvm/versions/node/v20.12.1/bin/npm run build

@@ -9,3 +9,15 @@ hooks:
     - location: deployBeforeInstall.sh
       timeout: 30
       runas: ec2-user
+  Install:
+    - location: deployInstall.sh
+      timeout: 300
+      runas: ec2-user
+  AfterInstall:
+    - location: deployAfterInstall.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: ApplicationStart.sh
+      timeout: 30
+      runas: ec2-user
