@@ -1,5 +1,8 @@
 version: 0.0
 os: linux
+files:
+  - source: /
+    destination: /var/www/wtaiatella
 hooks:
   DownloadBundle:
     - location: deployDownloadBundle.sh
