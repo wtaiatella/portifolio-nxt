@@ -3,8 +3,6 @@ os: linux
 files:
   - source: /
     destination: /var/www/wtaiatella
-  - source: /home/ec2-user/env/
-    destination: /var/www/wtaiatella
 hooks:
   DownloadBundle:
     - location: ./scripts/deployDownloadBundle.sh
