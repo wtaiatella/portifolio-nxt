@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /
     destination: /var/www/wtaiatella
-  - source: ~/.env/
+  - source: /home/ec2-user/env/
     destination: /var/www/wtaiatella
 hooks:
   DownloadBundle:
