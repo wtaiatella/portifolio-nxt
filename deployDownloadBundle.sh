@@ -1,2 +1,2 @@
 #!/bin/bash
-git pull origin main
+/usr/bin/git pull origin main

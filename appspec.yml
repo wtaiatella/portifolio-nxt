@@ -3,5 +3,9 @@ os: linux
 hooks:
   ApplicationStop:
     - location: deployApplicationStop.sh
-      timeout: 300
+      timeout: 30
+      runas: ec2-user
+  DownloadBundle:
+    - location: deployDownloadBundle.sh
+      timeout: 30
       runas: ec2-user
