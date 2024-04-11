@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 hooks:
-  ApplicationStop:
-    - location: deployApplicationStop.sh
-      timeout: 30
-      runas: ec2-user
   DownloadBundle:
     - location: deployDownloadBundle.sh
+      timeout: 30
+      runas: ec2-user
+  BeforeInstall:
+    - location: deployBeforeInstall.sh
       timeout: 30
       runas: ec2-user
