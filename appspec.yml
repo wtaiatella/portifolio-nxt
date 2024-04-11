@@ -4,4 +4,4 @@ hooks:
   ApplicationStop:
     - location: deployApplicationStop.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
