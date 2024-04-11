@@ -7,18 +7,18 @@ files:
     destination: /var/www/wtaiatella
 hooks:
   DownloadBundle:
-    - location: deployDownloadBundle.sh
+    - location: ./scripts/deployDownloadBundle.sh
       timeout: 30
       runas: ec2-user
   BeforeInstall:
-    - location: deployBeforeInstall.sh
+    - location: ./scripts/deployBeforeInstall.sh
       timeout: 30
       runas: ec2-user
   AfterInstall:
-    - location: deployAfterInstall.sh
+    - location: ./scripts/deployAfterInstall.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
-    - location: deployApplicationStart.sh
+    - location: ./scripts/deployApplicationStart.sh
       timeout: 30
       runas: ec2-user
