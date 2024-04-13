@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /var/www/wtaiatella
 permissions:
-  - object: /
+  - object: /var/www/wtaiatella/scripts
     pattern: "*.sh"
     owner: ec2-user
     group: ec2-user
@@ -13,18 +13,18 @@ permissions:
       - file
 hooks:
   DownloadBundle:
-    - location: deployDownloadBundle.sh
+    - location: scripts/deployDownloadBundle.sh
       timeout: 30
       runas: ec2-user
   BeforeInstall:
-    - location: deployBeforeInstall.sh
+    - location: scripts/deployBeforeInstall.sh
       timeout: 30
       runas: ec2-user
   AfterInstall:
-    - location: deployAfterInstall.sh
+    - location: scripts/deployAfterInstall.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
-    - location: deployApplicationStart.sh
+    - location: scripts/deployApplicationStart.sh
       timeout: 30
       runas: ec2-user
