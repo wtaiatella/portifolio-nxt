@@ -6,7 +6,7 @@ export function Intro() {
   return (
     <Container>
       <p className="intro-title">Hey there!</p>
-      <h1 className="intro-title">I&apos;m Wagner Elias Taiatella</h1>
+      <h1 className="intro-title">I&apos;m Wagner Taiatella</h1>
       <h2 className="intro-highlight">Front End Web Developer</h2>
       <h3 className="intro-focus">focus on learning</h3>
       <a href="#portifolio" className="intro-btn">
@@ -14,7 +14,7 @@ export function Intro() {
       </a>
       <Image
         alt="Mountains"
-        src="/img/header-image.png"
+        src="/img/dark-laptop.jpg"
         fill
         style={{
           objectFit: "cover",
