@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 // Comandos para build
-                sh 'pm2 stop 2'
+                sh '/home/mdm/.asdf/shims/pm2 stop 2'
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'whoami'
@@ -25,8 +25,8 @@ pipeline {
                 echo 'Deploying..'
                 // Comandos para deploy
                 sh 'ls -la'
-                sh 'pm2 start 2'
+                sh '/home/mdm/.asdf/shims/pm2 start 2'
             }
         }
-    }
+    
 }
