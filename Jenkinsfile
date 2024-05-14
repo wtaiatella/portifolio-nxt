@@ -28,5 +28,5 @@ pipeline {
                 sh '/home/mdm/.asdf/shims/pm2 start 2'
             }
         }
-    
+    } 
 }
