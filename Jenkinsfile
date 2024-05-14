@@ -23,6 +23,8 @@ pipeline {
             steps {
                 echo 'Deploying..'
                 // Comandos para deploy
+                sh 'ls -la'
+                sh 'pm2 stop 2'
             }
         }
     }
