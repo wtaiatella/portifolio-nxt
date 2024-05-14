@@ -8,7 +8,8 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'whoami'
-                sh  '/home/mdm/.asdf/shims/npm -v'
+                sh  '/home/mdm/.asdf/shims/npm install'
+                sh  '/home/mdm/.asdf/shims/npm build'
 
             }
         }
