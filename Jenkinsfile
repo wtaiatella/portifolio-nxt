@@ -1,17 +1,26 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Preparation') {
             steps {
-                echo 'Building..'
-                // Comandos para build
-                sh '/home/mdm/.asdf/shims/pm2 stop 2'
+                echo 'Preparing..'
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'whoami'
+                cp /var/www/wtaiatella/.env ./
+                sh 'ls -la'
+            }
+        }
+        stage('Install') {
+            steps {
+                echo 'Installing..'
                 sh  '/home/mdm/.asdf/shims/npm install'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building..'
                 sh  '/home/mdm/.asdf/shims/npm build'
-
             }
         }
         stage('Test') {
@@ -20,11 +29,46 @@ pipeline {
                 // Comandos para testes
             }
         }
-        stage('Deploy') {
+        stage('Preparation to Deploy to Production') {
             steps {
-                echo 'Deploying..'
-                // Comandos para deploy
+                echo 'Preparing to Deploy to Production..'
+
+                sh '/home/mdm/.asdf/shims/pm2 stop 2'
+                cd /var/www/wtaiatella
+                find . -mindepth 1 ! -name '.env' -exec rm -rf {} +
+            }
+        }
+        stage('Deploy to Production') {
+            steps {
+                echo 'Deploying to Production..'
+                
+                sh 'cp -rf * /var/www/wtaiatella/'
+                sh 'cp -rf .env /var/www/wtaiatella/'
+                sh 'cp -rf .eslintrc.json /var/www/wtaiatella/'
+                sh 'cp -rf .git /var/www/wtaiatella/'
+                sh 'cp -rf .gitignore /var/www/wtaiatella/'
+                sh 'cd /var/www/wtaiatella'
                 sh 'ls -la'
+            }
+        }
+        stage('Install in production') {
+            steps {
+                echo 'Installing..'
+                sh 'cd /var/www/wtaiatella'
+                sh  '/home/mdm/.asdf/shims/npm install'
+            }
+        }
+        stage('Build in production') {
+            steps {
+                echo 'Building..'
+                sh 'cd /var/www/wtaiatella'
+                sh  '/home/mdm/.asdf/shims/npm build'
+            }
+        }
+        stage('Start Application') {
+            steps {
+                echo 'Starting Application..'
+                sh 'cd /var/www/wtaiatella'
                 sh '/home/mdm/.asdf/shims/pm2 start 2'
             }
         }
