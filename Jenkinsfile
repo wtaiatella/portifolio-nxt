@@ -35,7 +35,7 @@ pipeline {
 
                 sh '/home/mdm/.asdf/shims/pm2 stop 2'
                 sh 'cd /var/www/wtaiatella'
-                sh 'find . -mindepth 1 ! -name '.env' -exec rm -rf {} +'
+                sh "find . -mindepth 1 ! -name '.env' -exec rm -rf {} +"
             }
         }
         stage('Deploy to Production') {
