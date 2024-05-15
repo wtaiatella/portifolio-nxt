@@ -20,7 +20,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh  '/home/mdm/.asdf/shims/npm build'
+                sh  '/home/mdm/.asdf/shims/npm run build'
             }
         }
         stage('Test') {
@@ -62,7 +62,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'cd /var/www/wtaiatella'
-                sh  '/home/mdm/.asdf/shims/npm build'
+                sh  '/home/mdm/.asdf/shims/npm run build'
             }
         }
         stage('Start Application') {
