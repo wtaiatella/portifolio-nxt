@@ -34,14 +34,16 @@ pipeline {
                 echo 'Preparing to Deploy to Production..'
 
                 sh '/home/mdm/.asdf/shims/pm2 stop 2'
-                sh 'cd /var/www/wtaiatella'
-                sh "find . -mindepth 1 ! -name '.env' -exec rm -rf {} +"
+                sh 'cd /var/www/'
+                sh "rm -rf wtaiatella"
+                sh 'mkdir wtaiatella'
             }
         }
         stage('Deploy to Production') {
             steps {
                 echo 'Deploying to Production..'
                 
+                sh 'cd /var/www/jenkins-agent/workspace/wtaiatella'
                 sh 'cp -rf * /var/www/wtaiatella/'
                 sh 'cp -rf .env /var/www/wtaiatella/'
                 sh 'cp -rf .eslintrc.json /var/www/wtaiatella/'
