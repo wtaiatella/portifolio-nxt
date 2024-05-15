@@ -7,7 +7,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'whoami'
-                cp /var/www/wtaiatella/.env ./
+                sh 'cp /var/www/wtaiatella/.env ./'
                 sh 'ls -la'
             }
         }
@@ -34,8 +34,8 @@ pipeline {
                 echo 'Preparing to Deploy to Production..'
 
                 sh '/home/mdm/.asdf/shims/pm2 stop 2'
-                cd /var/www/wtaiatella
-                find . -mindepth 1 ! -name '.env' -exec rm -rf {} +
+                sh 'cd /var/www/wtaiatella'
+                sh 'find . -mindepth 1 ! -name '.env' -exec rm -rf {} +'
             }
         }
         stage('Deploy to Production') {
